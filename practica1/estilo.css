@@ -1,13 +1,19 @@
 body {/*body es un selector*/
       font: 400 15px Tahoma, sans-serif; /*Familia sans-serif*/
       line-height: 1.8;
-      color: #818181;
+      color: #000000;
       background-color: #f6f6f6;
   }
 h1 {
-      background-color:#FF5733; 
-      color: #fff;
+      background-color:#970a0aa2; 
+      color: #000000;
       text-transform: uppercase;
       padding: 100px 25px;
       text-align: center;     
   }
+table, th, td {
+  border: 1px solid black;
+}
+ul.a {
+  list-style-type: circle;
+}
