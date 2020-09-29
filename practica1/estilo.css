@@ -1,8 +1,9 @@
 body {/*body es un selector*/
-      font: 400 15px Tahoma, sans-serif; /*Familia sans-serif*/
+      font: 400 15px Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
       line-height: 1.8;
       color: #000000;
       background-color: #f6f6f6;
+      text-align: justify;
   }
 h1 {
       background-color:#970a0aa2; 
@@ -10,10 +11,33 @@ h1 {
       text-transform: uppercase;
       padding: 100px 25px;
       text-align: center;     
-  }
-table, th, td {
+}
+
+h4.a {
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h4.b {
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+table, th, td{
   border: 1px solid black;
+}
+
+th{
+  text-align: center;
+}
+
+table.center{
+  margin: auto;
 }
 ul.a {
   list-style-type: circle;
+  display: table;
+  margin: auto;
 }
