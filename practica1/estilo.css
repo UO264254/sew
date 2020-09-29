@@ -17,12 +17,14 @@ h4.a {
   color: #000000;
   text-transform: uppercase;
   text-align: center;
+  background-color: #f6f6f6;
 }
 
 h4.b {
   color: #000000;
   text-transform: uppercase;
   text-align: center;
+  background-color: #f6f6f6;
 }
 
 table, th, td{
