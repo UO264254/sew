@@ -1,3 +1,4 @@
+/*0001*/
 body {/*body es un selector!!!*/
       font: 400 15px Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
       line-height: 1.8;
@@ -5,6 +6,7 @@ body {/*body es un selector!!!*/
       background-color: #f6f6f6;
       text-align: justify;
   }
+/*0001*/
 h1 {
       background-color:#FCCB1A; 
       color:#3214B8;
@@ -13,7 +15,7 @@ h1 {
       text-align: center;     
 }
 
-/*Introducción del background color*/
+/*0001*/
 h2.a {
   color: #000000;
   text-transform: uppercase;
@@ -21,6 +23,7 @@ h2.a {
   background-color: #f6f6f6;
 }
 
+/*0001*/
 h2.b {
   color: #000000;
   text-transform: uppercase;
@@ -28,17 +31,21 @@ h2.b {
   background-color: #f6f6f6;
 }
 
+/*0001*/
 table, th, td{
   border: 1px solid black;
 }
 
+/*0001*/
 th{
   text-align: center;
 }
 
+/*0001*/
 table.center{
   margin: auto;
 }
+/*0001*/
 ul.a {
   list-style-type: circle;
   display: table;
