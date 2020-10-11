@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <!--Datos que describen el documento-->
+
+        <meta charset="UTF-8"/>
+
+        <!--Metadatos estándares-->
+        <meta name="author" content="Alejo Brandy García-Rovés"/>
+        <meta name="description" content="Página web que muestra los contenidos de la película Gremlins"/>
+        <meta name="keywords" content="html5, estándares, gremlins, Gizmo"/>
+
+        <title>Bandas sonoras</title>
+
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
+        <!--Hoja de estilos adicional-->
+        <link rel="stylesheet" type="text/css" href="tabla.css" title="Tabla"/>
+
+    </head>
+
+    <body>
+        <!--Datos con el contenido que aparece en el navegador-->
+        <header>
+            <h1>Gremlins</h1>
+        </header>
+
+         <!--Menu de navegación principal-->
+         <nav>
+            <ul>
+                <li>
+                    <a title="Cartelera"
+                    tabindex= "1"
+                    accesskey="C" 
+                    href="index.html">
+                                Cartelera</a>
+                </li>
+                <li>
+                    <a title="Introducción"
+                    tabindex= "2"
+                    accesskey="I"
+                    href="intro.html">
+                                Introducción</a>
+                </li>
+                <li>
+                    <a title="Resumen"
+                    tabindex= "3"
+                    accesskey="R"
+                    href="resumen.html">
+                                Resumen</a>
+                </li>
+                <li>
+                    <a title="Protagonistas"
+                    tabindex= "4"
+                    accesskey="P"
+                    href="protagonistas.html" >
+                                Protagonistas</a>
+                </li>
+                <li>
+                    <a title="Bandas sonoras"
+                    tabindex= "5"
+                    accesskey="B"
+                    href="bandasSonoras.html" >
+                                    Bandas sonoras</a>
+                </li>
+                <p>Para saber más...<p>
+                    <ul>
+                        <li>
+                            <a title="Resurrección Dantesca"
+                            tabindex= "6"
+                            accesskey="S"
+                            href="resurreccionDantesca.html" >
+                                    Resurrección Dantesca</a>
+                        </li>
+                        <li>
+                            <a title="Steven y Gizmo: amor a primera vista"
+                            tabindex= "7"
+                            accesskey="G"
+                            href="amorAPrimeraVista.html" >
+                                    Steven y Gizmo: amor a primera vista</a>
+                        </li>
+                        <li>
+                            <a title="¿Kingston Falls, o Hill Valley?"
+                            tabindex= "8"
+                            accesskey="K"
+                            href="kingstonFalls.html" >
+                                    ¿Kingston Falls, o Hill Valley?</a>
+                        </li>
+                        <li>
+                            <a title="Reliquias fantásticas"
+                            tabindex= "9"
+                            accesskey="L"
+                            href="reliquiasFantasticas.html" >
+                                    Reliquias fantásticas</a>
+                        </li>
+                        <li>
+                            <a title="¿Hubo videojuegos? ¡Pues claro!"
+                            tabindex= "10"
+                            accesskey="V"
+                            href="videojuegos.html">
+                                    ¿Hubo videojuegos? ¡Pues claro!</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <section> 
+            <!-- Tabla donde se muestran las bandas sonoras-->
+                <table>
+                    <thead>
+                        <caption>Bandas sonoras</caption>
+                        <tr>
+                            <th>Autor</th>
+                            <th>Título</th>
+                            <th>Duración</th> 
+                            <th>Audio</th>  
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <tr>
+                            <td>Michael Sembello</td>
+                            <td>Gremlins... Mega Madness</td>
+                            <td>3:50</td>
+                            <td>
+                                <audio src="multimedia/gremlins...megaMadness.ogg" controls></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Quarterflash</td>
+                            <td>Make It Shine</td>
+                            <td>4:10</td>
+                            <td>
+                                <audio src="multimedia/makeItShine.ogg" controls></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Peter Gabriel</td>
+                            <td>Out Out</td>
+                            <td>7:00</td>
+                            <td>
+                                <audio src="multimedia/outOut.ogg" controls></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jerry Goldsmitd</td>
+                            <td>The Gift</td>
+                            <td>4:51</td>
+                            <td>
+                                <audio src="multimedia/theGift.ogg" controls></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jerry Goldsmitd</td>
+                            <td>Gizmo</td>
+                            <td>4:09</td>
+                            <td>
+                                <audio src="multimedia/gizmo.ogg" controls></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jerry Goldsmitd</td>
+                            <td>Mrs. Deagle</td>
+                            <td>2:50</td>
+                            <td>
+                                <audio src="multimedia/mrsDeagle.ogg" controls></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jerry Goldsmitd</td>
+                            <td>The Gremlin Rag</td>
+                            <td>4:03</td>
+                            <td>
+                                <audio src="multimedia/theGremlinRag.ogg" controls></audio>
+                            </td>
+                        </tr>             
+                                                
+                    </tbody>
+                </table>
+            </section>
+        
+        
+        <footer>
+            <a href="https://validator.w3.org/check?uri=referer">
+                <img src="images/HTML5.png" alt=" HTML5 Válido!" /></a>
+
+            <a href=" http://jigsaw.w3.org/css-validator/check/referer ">
+                <img src="images/CSS3.png"
+                alt="CSS Válido!" height="63" width="64"/></a>
+        </footer>
+    </body>
+</html>

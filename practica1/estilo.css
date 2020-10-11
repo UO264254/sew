@@ -1,3 +1,10 @@
+figure + img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
 /*0001*/
 body {/*body es un selector!!!*/
       font: 400 15px Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
@@ -5,7 +12,16 @@ body {/*body es un selector!!!*/
       color: #000000;
       background-color: #f6f6f6;
       text-align: justify;
-  }
+}
+
+nav{
+  width: 400px;
+  padding: 70px;
+  border: 10px solid #FCCB1A;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*0001*/
 h1 {
       background-color:#FCCB1A; 
@@ -16,11 +32,57 @@ h1 {
 }
 
 /*0001*/
-h2{
+h2, h3{
   color: #000000;
   text-transform: uppercase;
   text-align: center;
   background-color: #f6f6f6;
+}
+
+/*0002*/
+p + ul{/*Para la lista que va después de un encabezado h2*/
+  list-style-type: circle;
+  display: table;
+  margin: auto;
+}
+/*0001*/
+ul{
+list-style-type: square;
+display: table;
+margin: auto;
+}
+
+/*0001*/
+video{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  width: 500px;
+
+}
+
+/*0002*/
+h3 + video{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+
+/*0002*/
+h2 + img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+h3 + img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
 }
 
 /*0001*/
@@ -29,7 +91,7 @@ table, th, td{
 }
 
 /*0001*/
-th{
+th, td{
   text-align: center;
 }
 
@@ -37,9 +99,7 @@ th{
 table{
   margin: auto;
 }
-/*0001*/
-ul{
-  list-style-type: circle;
-  display: table;
-  margin: auto;
+
+caption{
+  font-family: "New Century Schoolbook", sans-serif;
 }
