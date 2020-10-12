@@ -2,12 +2,11 @@ figure + img{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
 }
 
 /*0001*/
 body {/*body es un selector!!!*/
-      font: 400 20px Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
+      font: 1em Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
       line-height: 1.8;
       color: #000000;
       background-color: #f6f6f6;
@@ -15,7 +14,7 @@ body {/*body es un selector!!!*/
 }
 
 nav{
-  width: 400px;
+  width: 50%;
   padding: 70px;
   border: 10px solid #FCCB1A;
   margin-left: auto;
@@ -24,6 +23,7 @@ nav{
 
 /*0001*/
 h1 {
+      font-size: 2em;
       background-color:#FCCB1A; 
       color:#3214B8;
       text-transform: uppercase;
@@ -33,6 +33,7 @@ h1 {
 
 /*0001*/
 h2, h3{
+  font-size: 1.5em;
   color: #000000;
   text-transform: uppercase;
   text-align: center;
@@ -51,8 +52,6 @@ video{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
-
 }
 
 /*0002*/
@@ -60,7 +59,7 @@ h3 + video{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
+  width: 25%;
 }
 
 /*0002*/
@@ -68,14 +67,14 @@ h2 + img{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
+  width: 25%;
 }
 
 h3 + img{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
+  width: 25%;
 }
 
 /*0001*/
@@ -95,4 +94,8 @@ table{
 
 caption{
   font-family: "New Century Schoolbook", sans-serif;
+}
+
+li{
+  padding: 10px;
 }
