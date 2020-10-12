@@ -7,7 +7,7 @@ figure + img{
 
 /*0001*/
 body {/*body es un selector!!!*/
-      font: 400 15px Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
+      font: 400 20px Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
       line-height: 1.8;
       color: #000000;
       background-color: #f6f6f6;
