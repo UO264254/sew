@@ -13,10 +13,16 @@ body {/*body es un selector!!!*/
       text-align: justify;
 }
 
+main{
+  margin-left:5%;
+  margin-right:5%;
+  margin-bottom: 5%;
+}
+
 nav{
   width: 50%;
   padding: 70px;
-  border: 10px solid #FCCB1A;
+  border: 5px solid #FCCB1A;
   margin-left: auto;
   margin-right: auto;
 }
@@ -48,27 +54,37 @@ margin: auto;
 }
 
 /*0001*/
-video{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+p > video{
+  width: 95%;
+  margin-left: 2%;
 }
 
+p > pre{
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+}
+
+video + p{
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+}
 /*0002*/
 h3 + video{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  width: 60%;
 }
 
-/*0002*/
-h2 + img{
+.cartel {
+  padding: 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
 }
+
 
 h3 + img{
   display: block;
@@ -76,6 +92,15 @@ h3 + img{
   margin-right: auto;
   width: 25%;
 }
+
+h2 + img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+
 
 /*0001*/
 table, th, td{
@@ -97,5 +122,49 @@ caption{
 }
 
 li{
-  padding: 10px;
+  padding: 5px;
+}
+
+p > img{
+  float: left;
+  width: 95%;
+}
+
+a> img{
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+  width: 2%;
+  height: 2%;
+}
+
+section{
+  display: flex;
+  /*background-color: #3214B8;*/
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+section > img{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  padding : 10px;
+}
+article {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+article > p{
+  display: grid;
+  grid-template-columns: auto;
+}
+
+video + a{
+  font-size: 0.75em;
+  text-align: center;
 }
