@@ -1,0 +1,22 @@
+
+/*Menu de navegación común en todos los documentos HTML5*/
+
+/*0001*/
+nav{
+  width: 50%;
+  padding: 35px;
+  border: 5px solid #FCCB1A;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*0001*/
+ul{
+  list-style-type: square;
+  display: table;
+  margin: auto;
+  }
+/*0001*/  
+li{
+  padding: 10px;
+}     
+
