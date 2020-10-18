@@ -8,6 +8,10 @@ body {/*body es un selector!!!*/
       text-align: justify;
 }
 
+pre{
+  font-size: 1em;
+}
+
 /*0001*/
 h1 {
   font-size: 2em;
