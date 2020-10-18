@@ -9,7 +9,7 @@ body {/*body es un selector!!!*/
 }
 
 pre{
-  font-size: 1em;
+  font: 1.2em Helvetica, sans-serif;
 }
 
 /*0001*/
