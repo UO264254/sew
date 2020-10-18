@@ -1,3 +1,4 @@
+@import url("navigator.css");
 /*0001*/
 body {/*body es un selector!!!*/
       font: 1em Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
@@ -13,7 +14,6 @@ h1 {
   background-color:#FCCB1A; 
   color:#3214B8;
   text-transform: uppercase;
-  padding: 100px 25px;
   text-align: center;     
 }
 
@@ -26,26 +26,6 @@ text-align: center;
 background-color: #f6f6f6;
 }
 
-/*Menu de navegación común en todos los documentos HTML5*/
-
-/*0001*/
-nav{
-  width: 50%;
-  padding: 70px;
-  border: 5px solid #FCCB1A;
-  margin-left: auto;
-  margin-right: auto;
-}
-/*0001*/
-ul{
-  list-style-type: square;
-  display: table;
-  margin: auto;
-  }
-/*0001*/  
-li{
-  padding: 5px;
-}     
 
 /*Main, se encuentra en todos los documentos*/
 /*0001*/
