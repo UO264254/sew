@@ -1,0 +1,14 @@
+/*0001*/
+table, th, td{
+    border: 1px solid black;
+  }
+  
+  /*0001*/
+  th, td{
+    text-align: center;
+  }
+  
+  /*0001*/
+  table{
+    margin: auto;
+  }

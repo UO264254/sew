@@ -1,0 +1,85 @@
+/*0002*/
+p > video{
+    width: 95%;
+    margin-left: 2%;
+  }
+  
+  /*0002*/
+  p > pre{
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+  }
+  
+  video + p{
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+  }
+  /*0002*/
+  h3 + video{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+  
+  .cartel {
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  h3 + img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+  }
+  
+  h2 + img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+  }
+  
+  p > img{
+    float: left;
+    width: 95%;
+  }
+  
+  a> img{
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+    width: 2%;
+    height: 2%;
+  }
+  
+  section > p {
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+  
+  section img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    padding : 10px;
+  }
+  
+  article > p{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  
+  video + a{
+    font-size: 0.75em;
+    text-align: center;
+  }

@@ -1,9 +1,3 @@
-figure + img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /*0001*/
 body {/*body es un selector!!!*/
       font: 1em Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
@@ -13,12 +7,28 @@ body {/*body es un selector!!!*/
       text-align: justify;
 }
 
-main{
-  margin-left:5%;
-  margin-right:5%;
-  margin-bottom: 5%;
+/*0001*/
+h1 {
+  font-size: 2em;
+  background-color:#FCCB1A; 
+  color:#3214B8;
+  text-transform: uppercase;
+  padding: 100px 25px;
+  text-align: center;     
 }
 
+/*0001*/
+h2, h3{
+font-size: 1.5em;
+color: #000000;
+text-transform: uppercase;
+text-align: center;
+background-color: #f6f6f6;
+}
+
+/*Menu de navegación común en todos los documentos HTML5*/
+
+/*0001*/
 nav{
   width: 50%;
   padding: 70px;
@@ -26,147 +36,23 @@ nav{
   margin-left: auto;
   margin-right: auto;
 }
-
-/*0001*/
-h1 {
-      font-size: 2em;
-      background-color:#FCCB1A; 
-      color:#3214B8;
-      text-transform: uppercase;
-      padding: 100px 25px;
-      text-align: center;     
-}
-
-/*0001*/
-h2, h3{
-  font-size: 1.5em;
-  color: #000000;
-  text-transform: uppercase;
-  text-align: center;
-  background-color: #f6f6f6;
-}
-
 /*0001*/
 ul{
-list-style-type: square;
-display: table;
-margin: auto;
-}
-
-/*0001*/
-p > video{
-  width: 95%;
-  margin-left: 2%;
-}
-
-p > pre{
-  margin-left: auto;
-  margin-right: auto;
-  float: right;
-}
-
-video + p{
-  margin-left: auto;
-  margin-right: auto;
-  float: right;
-}
-/*0002*/
-h3 + video{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-}
-
-.cartel {
-  padding: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-h3 + img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
-}
-
-h2 + img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
-}
-
-
-
-/*0001*/
-table, th, td{
-  border: 1px solid black;
-}
-
-/*0001*/
-th, td{
-  text-align: center;
-}
-
-/*0001*/
-table{
+  list-style-type: square;
+  display: table;
   margin: auto;
-}
-
-caption{
-  font-family: "New Century Schoolbook", sans-serif;
-}
-
+  }
+/*0001*/  
 li{
   padding: 5px;
-}
+}     
 
-p > img{
-  float: left;
-  width: 95%;
-}
-
-a> img{
-  margin-left: auto;
-  margin-right: auto;
-  float: right;
-  width: 2%;
-  height: 2%;
-}
-
-section > p {
-  display: flex;
-  /*background-color: #3214B8;*/
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
-}
-
-section img{
+/*Main, se encuentra en todos los documentos*/
+/*0001*/
+main{
+  margin-left:5%;
+  margin-right:5%;
+  margin-bottom: 5%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
   padding : 10px;
-}
-
-main {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding : 10px;
-}
-
-article > p{
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
-video + a{
-  font-size: 0.75em;
-  text-align: center;
 }
