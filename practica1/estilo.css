@@ -26,13 +26,8 @@ text-align: center;
 background-color: #f6f6f6;
 }
 
-
-/*Main, se encuentra en todos los documentos*/
-/*0001*/
-main{
-  margin-left:5%;
-  margin-right:5%;
-  margin-bottom: 5%;
-  display: block;
-  padding : 10px;
+/*0002*/
+video + a{
+  font-size: 0.75em;
+  text-align: center;
 }
