@@ -34,13 +34,6 @@ h2 + img{
   margin-right: auto;
   width: 25%;
 }
-
-/*0002*/
-p > img{
-  float: left;
-  width: 95%;
-}
-
 /*0002*/
 a> img{
   margin-left: auto;
@@ -51,7 +44,7 @@ a> img{
 }
   
 /*0002*/
-section > p {
+section > aside {
   display: flex;
   margin: 10px;
   padding: 20px;
@@ -68,7 +61,7 @@ section img{
 }
 
 /*0002*/
-article > p{
+article > aside{
   display: grid;
   grid-template-columns: auto auto;
 }
