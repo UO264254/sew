@@ -57,20 +57,20 @@ img{
 
 /*0010*/
 .memoria{
-    background-color: grey;
-    color: white;
+    background-color: #B6ACB7;
+    color: #DAFFDA;
 }
 
 /*0010*/
 .digito{
-background-color: lightslategray;
-color: white;
+background-color: #56A1FC;
+color: #FFC8B7;
 }
 
 /*0010*/
 .igual{
-    background-color: lightslategray;
-    color: black;
+    background-color: #56A1FC;
+    color: #FFC8B7;
 }
 
 /*0010*/
@@ -82,4 +82,8 @@ color: white;
 /*0001*/
 footer > a{
     padding:10px;
+}
+
+p{
+    color: white;
 }
