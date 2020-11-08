@@ -1,0 +1,87 @@
+/* CalculadoraBasica.css */
+/*0001*/
+body{
+	font-size: 1.2em;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+	font-family: Arial, Helvetica, sans-serif;
+}
+/*0001*/
+table{
+    color: darkslategrey; 
+    margin-left:auto;
+    margin-right:auto;
+  /*  border-spacing: 5px;*/
+    table-layout:fixed;
+}
+/*0001*/
+section{
+	background-color: #D3D3D3; 
+    width:45%;
+    /*text-align: center;*/
+    padding-bottom: 10px;
+    color:black
+}
+/*0001*/
+td{
+    display:table-cell;
+	text-align: center;
+}
+/*0001*/
+span, input {
+	font-size: 1.2em;
+	border: 1px solid #D3D3D3;
+}
+/*0011*/
+sapn, input[type="button"] 
+{ 
+	padding: 5px;
+	width: 100%;
+} 
+/*0011*/
+input[type="text"] 
+{
+	text-align: right;
+	display: inline-block;
+	box-sizing: border-box;
+	font-size: 2em;
+    background-color: #D3D3D3;
+    color:black
+}
+
+/*0001*/
+footer {
+    margin-top:2em;
+}
+/*0001*/
+img{
+    width: 2.5%;
+    height: 31px;
+}
+
+/*0010*/
+.memoria{
+    background-color: grey;
+    color: white;
+}
+
+/*0010*/
+.digit{
+	background-color: white ;
+	color: black;
+	font-weight: bold;
+}
+
+/*0010*/
+.igual{
+    background-color: lightslategray;
+    color: black;
+}
+
+/*0010*/
+.ops{
+    background-color: #DCDCDC;
+    color: black;
+}
+
