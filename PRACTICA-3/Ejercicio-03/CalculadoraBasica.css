@@ -57,26 +57,26 @@ img{
 
 /*0010*/
 .memoria{
-    background-color: #B6ACB7;
-    color: #DAFFDA;
+    background-color: black;
+    color: white;
 }
 
 /*0010*/
 .digito{
-background-color: #56A1FC;
-color: #FFC8B7;
+    background-color: black;
+    color: white;
 }
 
 /*0010*/
 .igual{
-    background-color: #56A1FC;
-    color: #FFC8B7;
+    background-color: black;
+    color: white;
 }
 
 /*0010*/
 .operador{
-    background-color: salmon;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 /*0001*/
@@ -85,5 +85,6 @@ footer > a{
 }
 
 p{
+    background-color: black;
     color: white;
 }
