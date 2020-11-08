@@ -1,0 +1,32 @@
+/* Ejercicio2.css */
+/*0001*/
+body{
+    background-color:white;
+    color:black;
+}
+/*0001*/
+h1{
+    text-align:center;
+    font-size: 3em;
+}
+/*0001*/
+h2{
+    text-align:center;
+    color:black;
+    font-size: 2.5em;
+
+    background-color:white;
+}
+/*0001*/
+p{
+    font-size: 1em;
+}
+/*0001*/
+footer {
+    margin-top:2em;
+}
+/*0001*/
+img{
+    width: 2.5%;
+    height: 31px;
+}
