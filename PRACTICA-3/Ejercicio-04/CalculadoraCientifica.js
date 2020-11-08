@@ -83,7 +83,7 @@ class CalculadoraCientifica extends CalculadoraBasica{
         this.operando1=0
     }
     pi() {
-        this.cleanBeforeDigit=1;    //No se puede concatenar un dígito
+        //this.cleanBeforeDigit=1;    //No se puede concatenar un dígito
         this.getPantalla().value = Math.PI;
     }
     backspace(){
@@ -125,6 +125,10 @@ class CalculadoraCientifica extends CalculadoraBasica{
     sin() {
         this.igual();
         this.getPantalla().value = Math.sin(this.getNumberValue());
+    }
+
+    mod(){
+        this.display('%');
     }
 
     asin() {
