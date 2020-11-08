@@ -12,13 +12,16 @@
       <h1>Calculadora Básica</h1>
       <!-- Tabla donde se muestra la calculadora-->
       <table> 
-         <thead>
+            <tr>
+               <th></th>
+               <th></th>
+               <th></th>
+               <th></th>
+            </tr>
             <tr> 
-               <td colspan="4"><input type="text" id="pantalla"/></td> 
+               <td colspan="4"><input type="text" id="pantalla" title = "resultado" readonly/></td> 
                <!-- clr() function will call clr to clear all value -->
             </tr>
-         </thead>
-         <tbody>
             <tr>
                <td><input type="button" class="memoria" value="mrc" onclick="calculadora.mrc()"/> </td>
                <td><input type="button" class="memoria" value="m-" onclick="calculadora.mMenos()"/> </td>
@@ -50,7 +53,6 @@
                <td><input type="button" class="igual" value="=" onclick="calculadora.igual()"/> </td> 
                
             </tr>
-         </tbody>
       </table>
    </section>
 <footer>
