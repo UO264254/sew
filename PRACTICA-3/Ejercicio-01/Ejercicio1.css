@@ -33,10 +33,13 @@ p{
 /*0001*/
 footer {
     margin-top:2em;
-    padding: 1em;
 }
 /*0001*/
 img{
     width: 2.5%;
     height: 31px;
+}
+/*0001*/
+a{
+    padding:10px;
 }
