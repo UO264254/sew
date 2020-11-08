@@ -61,7 +61,7 @@ img{
 }
 
 /*0010*/
-.digit{
+.digito{
 background-color: lightslategray;
 color: white;
 }
@@ -73,7 +73,7 @@ color: white;
 }
 
 /*0010*/
-.ops{
+.operador{
     background-color: salmon;
     color: black;
 }
