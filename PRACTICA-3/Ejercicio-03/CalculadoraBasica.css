@@ -11,10 +11,11 @@ table{
     color: darkslategrey; 
     border: solid darkslategrey 2px;
     
+    font-size: 1.2em;
     width:80%;
     margin-left:auto;
     margin-right:auto;
-    border-radius: 10px;
+    border-radius: 5px;
     border-spacing: 5px;
     table-layout:fixed;
 }
@@ -27,7 +28,7 @@ section{
     color:black
 }
 /*0001*/
-td{
+td, th{
     display:table-cell;
 }
 /*0011*/
@@ -82,4 +83,3 @@ color: white;
 footer > a{
     padding:10px;
 }
-
