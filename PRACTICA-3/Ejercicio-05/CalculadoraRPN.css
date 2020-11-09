@@ -1,4 +1,4 @@
-/* Calculadora.css */
+/* CalculadoraBasica.css */
 /*0001*/
 body{
 	font-size: 1.2em;
@@ -19,7 +19,6 @@ table{
 section{
 	background-color: #D3D3D3; 
     width:45%;
-    /*text-align: center;*/
     padding-bottom: 10px;
     color:black
 }
@@ -34,7 +33,7 @@ span, input {
 	border: 1px solid #D3D3D3;
 }
 /*0011*/
-sapn, input[type="button"] 
+span, input[type="button"] 
 { 
 	padding: 5px;
 	width: 100%;
@@ -45,9 +44,10 @@ input[type="text"]
 	text-align: right;
 	display: inline-block;
 	box-sizing: border-box;
-	font-size: 2em;
+	font-size: 1.2em;
     background-color: #D3D3D3;
-    color:black
+    color:black;
+    width: 80%;
 }
 
 /*0001*/
@@ -61,12 +61,6 @@ img{
 }
 
 /*0010*/
-.memoria{
-    background-color: grey;
-    color: white;
-}
-
-/*0010*/
 .digit{
 	background-color: white ;
 	color: black;
@@ -74,7 +68,7 @@ img{
 }
 
 /*0010*/
-.igual{
+.enter{
     background-color: lightslategray;
     color: black;
 }
@@ -83,5 +77,21 @@ img{
 .ops{
     background-color: #DCDCDC;
     color: black;
+}
+
+/*0001*/
+p{
+    background-color: black;
+    color: white;
+}
+
+/*0001*/
+textarea{
+    resize: none;
+    background-color: lightslategray;
+    color: black;
+    font-size: 1.2em;
+    width: 80%;
+    text-align: right;
 }
 
