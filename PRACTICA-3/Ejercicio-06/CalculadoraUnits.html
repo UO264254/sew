@@ -1,53 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculadora de unidades</title>
-<link rel="stylesheet" href="CalculadoraUnits.css"/>
-<script src="CalculadoraUnits.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de unidades</title>
+  <link rel="stylesheet" href="CalculadoraUnits.css"/>
+  <script src="CalculadoraUnits.js"></script>
 </head>
-<body>
+<body onload="init()">
+  <section>
+    <h1>Calculadora de conversión de unidades</h1>
 
-<h1>La calculadora de conversión de unidades</h1>
-
-<p>Debes seleccionar una magnitud de la siguiente lista desplegable</p>
-
-<form class = "choose">
-    <label for="cars">Escoge una magnitud:</label>
-    <select name="magnitud" id="magnitud">
+    <select id="tipoMedida" onchange="calculadora.onSelectMedida()">
       <option value="longitud" onclick="calculadora.longitud()">Longitud</option>
       <option value="superficie" onclick="calculadora.superficie()">Superficie</option>
       <option value="volumen" onclick="calculadora.volumen()">Volumen</option>
-      <option value="potencia" onclick="calculadora.potencia()">Potencia</option>
+      <option value="peso" onclick="calculadora.peso()">Peso</option>
+      <option value="potencia" onclick="calculadora.presion()">Potencia</option>
       <option value="energia" onclick="calculadora.energia()">Energía</option>
-      <option value="temperatura" onclick="calculadora.temperatura()">Temperatura</option>
     </select>
-  </form>
+    <input type="number" id="pantalla" title="pantalla" oninput="calculadora.convertir()" >
+    <table>
+      <tr>
+        <th>De</th>
+        <th>A</th>
+      </tr>
+      <tr>
+        <td><select id="from" size="5" onchange="calculadora.convertir()"></select></td>
 
-<input class = "choose" type="text" id="pantalla" title="pantalla">
+        <td><select id="to" size="5"></select></td>
+      </tr>
+    </table>
+  </section>
 
-<form class = "longitud" >
-  <label for="longitud">Choose a length:</label>
-  <select name="longitud" id="longitud" size="5">
-    <option value="metro">Metro</option>
-    <option value="kilometro">Kilometro</option>
-    <option value="milla">Milla</option>
-    <option value="yarda">Yarda</option>
-    <option value="pies">Pies</option>
-  </select>
-</form>
-
-<form class = "longitud">
-    <label for="longitud">Conversion:</label>
-    <select name="longitud" id="longitud" size="5">
-        <option value="metro" disabled selected>Metro</option>
-        <option value="kilometro" disabled selected>Kilometro</option>
-        <option value="milla" disabled selected>Milla</option>
-        <option value="yarda" disabled selected>Yarda</option>
-        <option value="pies" disabled selected>Pies</option>
-    </select>
-  </form>
-
+  <footer>
+    <a href="http://validator.w3.org/check/referer" hreflang="es-us"> 
+        <img src="imagenes/HTML5.png" alt="¡HTML5 válido!"/></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img src="imagenes/CSS3.png" alt="¡CSS válido!" /></a>
+  </footer>
 </body>
 </html>
