@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de unidades</title>
+<link rel="stylesheet" href="CalculadoraUnits.css"/>
+<script src="CalculadoraUnits.js"></script>
+</head>
+<body>
+
+<h1>La calculadora de conversión de unidades</h1>
+
+<p>Debes seleccionar una magnitud de la siguiente lista desplegable</p>
+
+<form class = "choose">
+    <label for="cars">Escoge una magnitud:</label>
+    <select name="magnitud" id="magnitud">
+      <option value="longitud" onclick="calculadora.longitud()">Longitud</option>
+      <option value="superficie" onclick="calculadora.superficie()">Superficie</option>
+      <option value="volumen" onclick="calculadora.volumen()">Volumen</option>
+      <option value="potencia" onclick="calculadora.potencia()">Potencia</option>
+      <option value="energia" onclick="calculadora.energia()">Energía</option>
+      <option value="temperatura" onclick="calculadora.temperatura()">Temperatura</option>
+    </select>
+  </form>
+
+<input class = "choose" type="text" id="pantalla" title="pantalla">
+
+<form class = "longitud" >
+  <label for="longitud">Choose a length:</label>
+  <select name="longitud" id="longitud" size="5">
+    <option value="metro">Metro</option>
+    <option value="kilometro">Kilometro</option>
+    <option value="milla">Milla</option>
+    <option value="yarda">Yarda</option>
+    <option value="pies">Pies</option>
+  </select>
+</form>
+
+<form class = "longitud">
+    <label for="longitud">Conversion:</label>
+    <select name="longitud" id="longitud" size="5">
+        <option value="metro" disabled selected>Metro</option>
+        <option value="kilometro" disabled selected>Kilometro</option>
+        <option value="milla" disabled selected>Milla</option>
+        <option value="yarda" disabled selected>Yarda</option>
+        <option value="pies" disabled selected>Pies</option>
+    </select>
+  </form>
+
+</body>
+</html>
