@@ -11,13 +11,13 @@
   <section>
     <h1>Calculadora de conversión de unidades</h1>
 
-    <select id="tipoMedida" onchange="calculadora.onSelectMedida()">
-      <option value="longitud" onclick="calculadora.longitud()">Longitud</option>
-      <option value="superficie" onclick="calculadora.superficie()">Superficie</option>
-      <option value="volumen" onclick="calculadora.volumen()">Volumen</option>
-      <option value="peso" onclick="calculadora.peso()">Peso</option>
-      <option value="potencia" onclick="calculadora.presion()">Potencia</option>
-      <option value="energia" onclick="calculadora.energia()">Energía</option>
+    <select id="tipoMedida" onchange="calculadora.onSelectMedida()" title="tipoMedida">
+      <option value="longitud" >Longitud</option>
+      <option value="superficie" >Superficie</option>
+      <option value="volumen" >Volumen</option>
+      <option value="peso" >Peso</option>
+      <option value="potencia" >Potencia</option>
+      <option value="energia">Energía</option>
     </select>
     <input type="number" id="pantalla" title="pantalla" oninput="calculadora.convertir()" >
     <table>
@@ -26,9 +26,9 @@
         <th>A</th>
       </tr>
       <tr>
-        <td><select id="from" size="5" onchange="calculadora.convertir()"></select></td>
+        <td><select id="from" size="5" onchange="calculadora.convertir()" title="from"></select></td>
 
-        <td><select id="to" size="5"></select></td>
+        <td><select id="to" size="5" title="to"></select></td>
       </tr>
     </table>
   </section>
