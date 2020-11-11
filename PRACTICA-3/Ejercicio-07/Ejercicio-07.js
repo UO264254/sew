@@ -1,124 +1,105 @@
 "use strict";
 
-//Ocultar y mostrar los párrafos
-$(document).ready(function(){
-    $("#ocultarP").click(function(){
-      $("p").hide();
-    });
-    $("#mostrarP").click(function(){
-      $("p").show();
-    });
-  });
+class Ejercicio07 {
+    
+    constructor () {
+        var original_text;  
+    }
+    mostrarP(){
+        $("p").show();
+    }
+    ocultarP(){
+        $("p").hide();
+    }
 
-//Ocultar y mostrar la lista
-$(document).ready(function(){
-    $("#ocultarLista").click(function(){
-      $("ul").hide();
-    });
-    $("#mostrarLista").click(function(){
-      $("ul").show();
-    });
-  });
+    mostrarLista(){
+        $("ul").show();
+    }
 
-//Ocultar y mostrar la tabla
-$(document).ready(function(){
-    $("#ocultarTabla").click(function(){
-      $("table").hide();
-    });
-    $("#mostrarTabla").click(function(){
-      $("table").show();
-    });
-  });
+    ocultarLista(){
+        $("ul").hide();
+    }
 
-//Modificar el texto de un párrafo. 
-$(document).ready(function(){
-    var original_text = $("#parrafo1").text();
-    $("#modificarPMAY").click(function(){
+    ocultarTabla(){
+        $("table").hide();
+    }
+    mostrarTabla(){
+        $("table").show();
+    }
+
+    modificarParrafoMay(){
         var texto = $("#parrafo1").text();
+        this.original_text = texto;
         console.log("texto ", texto);
         texto = texto.toUpperCase();
         console.log("Texto a fijar " + texto);
         $("#parrafo1").text(texto);
-    });
-    $("#mostrarPOrginial").click(function(){
-        console.log("texto ", original_text);
-        $("#parrafo1").text(original_text);
-    });
-});
-
-//Modificar el color de fondo de todos los párrafos
-$(document).ready(function(){
-    $("#cambiarFondo").click(function(){
-      $("p").css("background-color", "yellow");
-      $('#cambiarFondo'). attr("disabled", true);
-    });
+    }
+            
+    mostrarParrafoOriginal(){
+        $("#parrafo1").text(this.original_text);
+    }
     
-});
+    cambiarFondo(){
+        $("p").css("background-color", "yellow");
+        $('#cambiarFondo'). attr("disabled", true);
+    }
 
-//Añadir elementos
-$(document).ready(function(){
-    $("#botonAppend").click(function(){
+    añadirBotonAppend(){
         $("#titulo2").append(" de los Gremlins ");
         $('#botonAppend').attr("disabled", true);
-    });
+        
+    }
 
-    $("#botonPrepend").click(function(){
+    añadirBotonPrepend(){
         $("#parrafo1").prepend("Una película muy recomendada. ");
         $('#botonPrepend').attr("disabled", true);
-    });
+    }
 
-    $("#botonAfter").click(function(){
+    añadirBotonAfter(){
         $("#listaUltimo").after("<li> <a href=\"https://www.espinof.com/la-sexta/gremlins-perfecto-balance-comedia-terror-este-clasicazo-navideno-joe-dante\">Gremlins: un clasicazo</a> </li>");
         $('#botonAfter').attr("disabled", true);
         $('#botonAfterRemove').removeAttr("disabled");
-    });
+    }
 
-    $("#botonBefore").click(function(){
+    añadirBotonBefore(){
         $("#listaPrimero").before("<li> <a href=\"https://www.pinterest.es/rasiel4/gremlins/\">Imágenes Gremlins</a> </li>");
         $('#botonBefore').attr("disabled", true);
         $('#botonBeforeRemove').removeAttr("disabled");
-    });
+    }
 
-    $("#botonCrearElementos").click(function(){
-        //$(this).attr('id',   this.id + '_' + new_id);
+    crearElementos(){
         var miTitulo2 = "<h2>Lista con enlaces de interés</h2>";
         var miParrafo = document.createElement("pre");
         miParrafo.innerHTML = "Son enlace muy importante para completar la información sobre Gremlins.";
-        //miTitulo2.attr('id',   this.id + '_' + 'new_id');
-        //$(this).attr('id',   this.miTitulo2 + '_' + 'new_id');
+
         $("#lista").before(miTitulo2);
         $("#lista").append(miParrafo);
         $('#botonCrearElementos').attr("disabled", true);
         $('#botonCrearElementosRemove').removeAttr("disabled");
-    });
+    }
 
-});
+    botonAfterRemove(){
+        $("#listaUltimo").next().remove();
+        $('#botonAfter').removeAttr("disabled");
+        $('#botonAfterRemove').attr("disabled", true);
+    }
 
-//Borrar elementos
-    $(document).ready(function(){
-        $("#botonAfterRemove").click(function(){
-            $("#listaUltimo").next().remove();
-            $('#botonAfter').removeAttr("disabled");
-            $('#botonAfterRemove').attr("disabled", true);
-        });
+    botonBeforeRemove(){
+        $("#lista li").first().remove();
+        $('#botonBefore').removeAttr("disabled");
+        $('#botonBeforeRemove').attr("disabled", true);
+    
+    }
 
-        $("#botonBeforeRemove").click(function(){
-            $("#lista li").first().remove();
-          
-            $('#botonBefore').removeAttr("disabled");
-            $('#botonBeforeRemove').attr("disabled", true);
-        });
+    botonCrearElementosRemove(){
+        $("#cambiarFondo").next().remove();
+        $("pre").remove();
+        $('#botonCrearElementosRemove').attr("disabled", true);
+        $('#botonCrearElementos').removeAttr("disabled");
+    }
 
-        $("#botonCrearElementosRemove").click(function(){
-            $("#cambiarFondo").next().remove();
-            $("pre").remove();
-            $('#botonCrearElementosRemove').attr("disabled", true);
-            $('#botonCrearElementos').removeAttr("disabled");
-        });
-    });
-
-    $(document).ready(function(){
-        $("#botonDOM").click(function(){
+    visualizarArbolDOM(){
         $("*", document.body).each(function() {
                 var etiquetaPadre = $(this).parent().get(0).tagName;
                 var texto = document.createTextNode( 
@@ -129,5 +110,43 @@ $(document).ready(function(){
                 miParrafo.append(texto);
                 $("#botonDOM").append(miParrafo);
             });
-        });
-    });
+    }
+
+
+    sumarFilasYColumnas(){
+        var colCount = $("#recaudacion tr:last td").length;
+        var totalTd =  $("#recaudacion tr td").length;
+       
+        var sum = 0;
+        //Suma de filas
+        $('#recaudacion tr td').each(function(index) { 
+            console.log("index:" + index);
+            if (index < totalTd - colCount) {   //no en la última fila
+              
+                if ((index+1) % colCount == 0) {
+                    $(this).text(sum);
+                    sum=0;
+                } else {
+                    sum += Number($(this).text());
+                    console.log(" text=" + $(this).text() + " sum = " + sum);
+                }
+            }
+         });
+         //Suma de columnas
+         var sumacols = [];
+         for (var i = 0; i<colCount; i++) {
+             sumacols[i]=0;
+         }
+         $('#recaudacion tr td').each(function(index) { 
+            var ncol = index % colCount;
+            if (index < totalTd - colCount) {   //no en la última fila
+                sumacols[ncol] += Number($(this).text());
+            } else { //ultima fila con los totales de columnas
+                $(this).text(sumacols[ncol]);
+            }
+         });
+    }
+}
+var ejercicio07 = new Ejercicio07();
+
+

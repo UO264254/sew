@@ -20,7 +20,7 @@
 
     </head>
 
-    <body>
+    <body onload="ejercicio07.sumarFilasYColumnas()">
         <!--Datos con el contenido que aparece en el navegador-->
         <header>
             <h1>Gremlins</h1>
@@ -29,7 +29,7 @@
         <section>
             <h2 id = titulo2>Introducción</h2>
 
-            <button id="botonAppend" >Añade información a Introducción</button>
+            <button id="botonAppend" onclick="ejercicio07.añadirBotonAppend()">Añade información a Introducción</button>
             
             <p id = "parrafo1">Gremlins es una película estadounidense de comedia-terror del año 1984 dirigida por Joe Dante,
                 escrita por Chris Columbus y protagonizada por Zach Galligan y Phoebe Cates. Fue producida por
@@ -38,9 +38,9 @@
                 fue la encargada de realizar la película.
             </p>
 
-            <button id="modificarPMAY" >Mostrar párrafo en mayúsculas</button>
-            <button id="mostrarPOrginial" >Mostrar párrafo original</button>
-            <button id="botonPrepend" >Añade información al párrafo</button>
+            <button id="modificarPMAY" onclick="ejercicio07.modificarParrafoMay()">Mostrar párrafo en mayúsculas</button>
+            <button id="mostrarPOrginial" onclick="ejercicio07.mostrarParrafoOriginal()">Mostrar párrafo original</button>
+            <button id="botonPrepend" onclick="ejercicio07.añadirBotonPrepend()">Añade información al párrafo</button>
 
             <p id = "parrafo1">Merece especial mención el trabajo artístico en la creación de los Gremlins; la crítica alabó el
                trabajo del equipo encabezado por Chris Wallas –creador de Gizmo, así como del resto de las
@@ -50,9 +50,9 @@
 
             <p id = "parrafo1">A continuación mostraré una serie de enlaces que se pueden consultar para completar la información:</p>
 
-            <button id="ocultarP">Ocultar párrafos</button>
-            <button id="mostrarP">Mostrar párrafos</button>
-            <button id="cambiarFondo"> Modifica el color de fondo de los párrafos</button>
+            <button id="ocultarP" onclick="ejercicio07.ocultarP()">Ocultar párrafos</button>
+            <button id="mostrarP" onclick="ejercicio07.mostrarP()">Mostrar párrafos</button>
+            <button id="cambiarFondo" onclick="ejercicio07.cambiarFondo()"> Modifica el color de fondo de los párrafos</button>
 
             <ul id="lista">
                 <li id="listaPrimero">
@@ -78,14 +78,14 @@
                 </li>
             </ul>
 
-            <button id="ocultarLista">Ocultar lista</button>
-            <button id="mostrarLista">Mostrar lista</button>
-            <button id="botonAfter">Añadir link después lista</button>
-            <button id="botonAfterRemove" disabled="false">Borrar link después lista</button>
-            <button id="botonBefore">Añadir link antes lista</button>
-            <button id="botonBeforeRemove" disabled="false">Borrar link antes lista</button>
-            <button id ="botonCrearElementos">Crear elementos</button>
-            <button id ="botonCrearElementosRemove" disabled="false">Borrar los elementos creados</button>
+            <button id="ocultarLista" onclick="ejercicio07.ocultarLista()">Ocultar lista</button>
+            <button id="mostrarLista" onclick="ejercicio07.mostrarLista()">Mostrar lista</button>
+            <button id="botonAfter" onclick="ejercicio07.añadirBotonAfter()">Añadir link después lista</button>
+            <button id="botonAfterRemove" disabled="false" onclick="ejercicio07.botonAfterRemove()">Borrar link después lista</button>
+            <button id="botonBefore" onclick="ejercicio07.añadirBotonBefore()">Añadir link antes lista</button>
+            <button id="botonBeforeRemove" disabled="false" onclick="ejercicio07.botonBeforeRemove()">Borrar link antes lista</button>
+            <button id ="botonCrearElementos" onclick="ejercicio07.crearElementos()">Crear elementos</button>
+            <button id ="botonCrearElementosRemove" disabled="false" onclick="ejercicio07.botonCrearElementosRemove()">Borrar los elementos creados</button>
 
         </section>
         
@@ -152,11 +152,58 @@
                 </tbody>
             </table>
 
-            <button id="ocultarTabla">Ocultar tabla</button>
-            <button id="mostrarTabla">Mostrar tabla</button>
+            <button id="ocultarTabla" onclick="ejercicio07.ocultarTabla()">Ocultar tabla</button>
+            <button id="mostrarTabla" onclick="ejercicio07.mostrarTabla()">Mostrar tabla</button>
         </main>
 
-        <button id ="botonDOM">Ver el árbol DOM</button>
+        <section>
+            <h3>Recaudación</h3>
+            <table id="recaudacion">
+                <tr>
+                  <th></th>
+                  <th scope="col">Salas</th>
+                  <th scope="col">Plataformas</th>
+                  <th scope="col">Summatory</th>
+              
+                </tr>
+                <tr>
+                  <th scope="row">1984</th>
+                  <td>50000</td>
+                  <td>30000</td>
+                  <td></td>
+              
+                </tr>
+                <tr>
+                  <th scope="row">1985</th>
+                  <td>10000</td>
+                  <td>5000</td>
+                  <td></td>
+              
+                </tr>
+                <tr>
+                  <th scope="row">1986</th>
+                  <td>5000</td>
+                  <td>2000</td>
+                  <td></td>
+              
+                </tr>
+                <tr>
+                  <th scope="row">>1986</th>
+                  <td>30000</td>
+                  <td>15000</td>
+                  <td></td>
+              
+                </tr>
+                <tr>
+                  <th scope="row">Summatory</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+            </table>
+        </section>
+
+        <button id ="botonDOM" onclick="ejercicio07.visualizarArbolDOM()">Ver el árbol DOM</button>
 
     <footer>
         <a href="https://validator.w3.org/check?uri=referer">
