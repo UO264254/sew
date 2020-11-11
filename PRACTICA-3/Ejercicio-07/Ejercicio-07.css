@@ -1,0 +1,58 @@
+body {/*body es un selector!!!*/
+    font: 1em Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
+    line-height: 1.8;
+    color: #000000;
+    background-color: white;
+    text-align: justify;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom: 5%;
+    display: block;
+    padding : 10px;
+}
+
+pre{
+    font: 1em Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
+}
+
+/*0001*/
+h1 {
+    font-size: 2em;
+    background-color:#FCCB1A; 
+    color:#3214B8;
+    text-transform: uppercase;
+    text-align: center;     
+}
+
+/*0001*/
+h2, h3{
+    font-size: 1.5em;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: white;
+}
+
+/*0001*/
+table, th, td{
+    border: 1px solid black;
+}
+  
+/*0001*/
+th, td{
+    text-align: center;
+}
+  
+/*0001*/
+table{
+    margin: auto;
+}
+
+/*0002*/
+a> img{
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+    width: 2%;
+    height: 2%;
+}
