@@ -3,7 +3,7 @@
 class Ejercicio08 {
     constructor(){
         this.apikey = "b1daf9771a43cb97e6f1456fd834a04c";
-        this.url = "http://api.openweathermap.org/data/2.5/weather?q=";
+        this.url = "https://api.openweathermap.org/data/2.5/weather?q=";
         
     }
 
@@ -22,7 +22,7 @@ class Ejercicio08 {
                 elEjercicio.mostrarTiempo();         
             },
             error:function(){
-                document.write("<h2>¡problemas! No puedo obtener información de <a href='http://openweathermap.org'>OpenWeatherMap</a></h2>");    
+                document.write("<h2>¡problemas! No puedo obtener información de <a href='https://openweathermap.org'>OpenWeatherMap</a></h2>");    
             }
         });
     }
