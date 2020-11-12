@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información meteorológica</title>
+  <link rel="stylesheet" href="Ejercicio08.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="Ejercicio08.js"></script>
+</head>
+<body>
+  <section>
+    <h1>Información meteorológica</h1>
+
+    <select id="ciudad" onchange="ejercicio08.cargarDatos()" title="ciudad" size="3">
+      <option value="aviles" >Avilés</option>
+      <option value="gijon" >Gijón</option>
+      <option value="mieres" >Mieres</option>
+    </select>
+    
+  </section>
+  <section id="tiempo" hidden>
+    <h2 id="nomCiudad">NOMBRE_DE_LA_CIUDAD</h2>
+    <p id="datos">DATOS_METEOROLOGICOS</p>
+  </section>
+
+  <footer>
+    <a href="http://validator.w3.org/check/referer" hreflang="es-us"> 
+        <img src="imagenes/HTML5.png" alt="¡HTML5 válido!"/></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img src="imagenes/CSS3.png" alt="¡CSS válido!" /></a>
+  </footer>
+</body>
+</html>
