@@ -1,0 +1,41 @@
+/*0001*/
+body{
+	font-size: 1.5em;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*0001*/
+select{
+    display: block;
+    border: solid black 2px; 
+    font-size: 1.2em;
+}
+
+/*0001*/
+footer {
+    margin-top:2em;
+}
+/*0001*/
+img{
+    width: 5%;
+    height: 31px;
+}
+
+/*0002*/
+footer > a{
+    padding:10px;
+}
+  
+/*0001*/
+th, td{
+    text-align: left;
+    padding: 10px;
+}
+  
+/*0001*/
+table{
+    margin-right: auto;
+}
