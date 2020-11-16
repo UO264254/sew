@@ -22,7 +22,6 @@ h2{
 /*0001*/
 img {
     height: 250px;
-    float: left;
 }
 
 /*0003*/
@@ -30,5 +29,10 @@ footer a img{
     padding:100px;
     width: 5%;
     height: 31px;
+}
+
+/*0001*/
+section{
+width: 100%;
 }
 

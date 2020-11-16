@@ -5,17 +5,101 @@ class Ejercicio10 {
         $("#acciones").hide();
         this.maxwidth=200;
         this.maxheight=200;
+        this.numImagenes = 5;
+        this.photo_ids = [];
+        this.secrets = [];
     }
-
-    cargarImagenes(){
-        var me = this;
+    cargarImagenes() {
         var tag = $( "#menuImagen").val();
+        switch (tag) {
+            case 'recientes':
+                this.cargarRecientes();
+                break;
+            case 'populares' :
+                this.cargarPopulares();
+                break;
+            case 'interesantes' :
+                this.cargarInteresantes();
+                break;
+            default:
+                this.cargarTema(tag);
+                break;
+        }
         $("#imagenes").empty();
         $("<h2>").appendTo( "#imagenes" );
         $("#imagenes h2").text("Carrusel de " + $( "#menuImagen option:selected" ).text());
-        me.numImagenes = 5;
-       
-        var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?"; //cambiar api
+    }
+    cargarRecientes() {
+        console.log("cargar recientes");
+        var me = this;
+        this.photo_ids=[];
+        var flickrAPI =  "https://www.flickr.com/services/rest/?jsoncallback=?";
+        $.getJSON(flickrAPI, 
+                {
+                    method: "flickr.photos.getRecent",
+                    api_key: "5a7658d7ab10dea35508741cfc4ef535",
+                    format:"json"
+                })
+            .done(function(data) {
+                    $.each(data.photos.photo, function(i,item ) {
+                        var srcImg = "https://live.staticflickr.com/"+item.server+"/"+item.id+"_" + item.secret + ".jpg";
+                        $("<img>").attr( "src", srcImg).attr("id", "img_" + i).appendTo( "#imagenes" );
+                        me.photo_ids.push(item.id);
+                        me.secrets.push(item.secret);
+                        if ( i == me.numImagenes - 1 ) {
+                            return;
+                        }
+                        me.ajustar();
+                        $("#imagenes img").not(":first").hide();
+                        me.imagenActual = 0;
+                        $("#acciones").show();
+                        me.mostrarSizesImagen(me.photo_ids[0]);
+                    });
+            
+        });
+
+    }
+/*    cargarFotos() {
+        console.log("Cargar fotos " + this.photo_ids);
+       for (var i=0; i<this.photo_ids.length;i++) {
+           this.cargarFoto(this.photo_ids[i], this.secrets[i], i);
+       }
+    }
+    cargarFoto(id, sec, i) {
+        console.log("cargar foto " + id + " secre " + sec);
+        var flickrAPI = "https://www.flickr.com/services/rest/?jsoncallback=?";
+        var me = this;
+        $.getJSON(flickrAPI, 
+                {
+                    method: "flickr.photos.getInfo",
+                    api_key: "5a7658d7ab10dea35508741cfc4ef535",
+                    format:"json",
+                    photo_id: id,
+                    secret: sec
+                })
+            .done(function(data) {
+                console.log("info ", data);
+                var srcImg = "https://live.staticflickr.com/"+data.photo.server+"/"+_{secret}.jpg"
+                $("<img>").attr( "src", data.photo.urls.url[0]._content).attr("id", "img_" + i).appendTo( "#imagenes" );
+                
+                //me.ajustar();
+                $("#imagenes img").not(":first").hide();
+                me.imagenActual = 0;
+                $("#acciones").show();
+                me.mostrarSizesImagen(me.photo_ids[0]);
+        });
+    }*/
+    cargarInteresantes() {
+
+    }
+    cargarPopulares() {
+        //user_id 156927629@N08
+    }
+    cargarTema(tag){
+        var me = this;
+      
+        var photo_ids=[];
+        var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
         $.getJSON(flickrAPI, 
                 {
                     tags: tag,
@@ -24,6 +108,10 @@ class Ejercicio10 {
                 })
             .done(function(data) {
                     $.each(data.items, function(i,item ) {
+                        var link = item.link.split('/');
+                        
+                        me.photo_ids.push(link[link.length-2]);
+                        
                         $("<img>").attr( "src", item.media.m).attr("id", "img_" + i).appendTo( "#imagenes" );
                         if ( i == me.numImagenes - 1 ) {
                             return false;
@@ -33,9 +121,26 @@ class Ejercicio10 {
                 $("#imagenes img").not(":first").hide();
                 me.imagenActual = 0;
                 $("#acciones").show();
+                me.mostrarSizesImagen(me.photo_ids[0]);
         });
-    }
 
+        
+    }
+    mostrarSizesImagen(idImagen) {
+        var url = "https://www.flickr.com/services/rest/?jsoncallback=?";
+       
+        $.getJSON(url, 
+                {
+                    method: "flickr.photos.getSizes",
+                    api_key: "5a7658d7ab10dea35508741cfc4ef535",
+                    photo_id: idImagen,
+                    format:"json"
+
+                })
+            .done(function(data) {
+                console.log(data);
+            });
+    }
     siguienteImagen(){    
         
         $("#img_" + this.imagenActual).slideUp();
@@ -45,6 +150,7 @@ class Ejercicio10 {
         }
         
         $("#img_" + this.imagenActual).slideDown();
+        this.mostrarSizesImagen(this.photo_ids[this.imagenActual]);
     }
     ajustar() {
         $("#imagenes img").each(function() {

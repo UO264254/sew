@@ -10,16 +10,19 @@
 <body onload="init()">
     <section>
         <h1>Imágenes obtenidas de <a href="https://www.flickr.com/">Flickr</a></h1>
-        
+      
         <select id="menuImagen" onchange="ejercicio10.cargarImagenes()" title="menuImagen" size="7">
-            <option value="naturaleza" >Naturaleza</option>
-            <option value="ciudades" >Ciudades</option>
-            <option value="deportes" >Deportes</option>
-            <option value="playa" >Playa</option>
-            <option value="animales" >Animales</option>
-            <option value="mar" >El mar</option>
-            <option value="puestasSol" >Puestas de sol</option>
+            <option value="recientes" >Recientes</option>
+            <option value="populares" >Populares</option>
+            <option value="interesantes" >Interesantes</option>
+            <optgroup label="Por tema">
+                <option value="playa">Playa</option>
+                <option value="deportes">Deportes</option>
+                <option value="naturaleza">Naturaleza</option>
+                <option value="ciudades">Ciudades</option>
+            </optgroup>
         </select>
+        
     </section>
     <section id="imagenes">
         <h2></h2>
