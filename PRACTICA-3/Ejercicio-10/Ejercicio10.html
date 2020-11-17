@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consumo de servicios Web de imágenes y fotografías</title>
     <link rel="stylesheet" href="Ejercicio10.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,7 +14,6 @@
       
         <select id="menuImagen" onchange="ejercicio10.cargarImagenes()" title="menuImagen" size="7">
             <option value="recientes" >Recientes</option>
-            <option value="populares" >Populares</option>
             <option value="interesantes" >Interesantes</option>
             <optgroup label="Por tema">
                 <option value="playa">Playa</option>
@@ -25,10 +25,12 @@
         
     </section>
     <section id="imagenes">
-        <h2></h2>
+        <h2>Carrusel</h2>
     </section>
     <section id="acciones">
         <button id="siguiente" onclick="ejercicio10.siguienteImagen()">Siguiente</button>
+        <h2>Tienes disponible más tamaños:</h2>
+        <p id="datos">TAMAÑOS</p>
     </section>
     <footer>
         <a href="http://validator.w3.org/check/referer" hreflang="es-us"> 

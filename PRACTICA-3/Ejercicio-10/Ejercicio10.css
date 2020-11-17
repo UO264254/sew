@@ -26,7 +26,7 @@ img {
 
 /*0003*/
 footer a img{
-    padding:100px;
+    padding:10px;
     width: 5%;
     height: 31px;
 }
@@ -34,5 +34,23 @@ footer a img{
 /*0001*/
 section{
 width: 100%;
+}
+
+/*0001*/
+li{
+    padding: 5px;
+}
+
+button{
+  background-color: #e7e7e7; 
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 

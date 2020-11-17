@@ -15,9 +15,6 @@ class Ejercicio10 {
             case 'recientes':
                 this.cargarRecientes();
                 break;
-            case 'populares' :
-                this.cargarPopulares();
-                break;
             case 'interesantes' :
                 this.cargarInteresantes();
                 break;
@@ -30,7 +27,6 @@ class Ejercicio10 {
         $("#imagenes h2").text("Carrusel de " + $( "#menuImagen option:selected" ).text());
     }
     cargarRecientes() {
-        console.log("cargar recientes");
         var me = this;
         this.photo_ids=[];
         var flickrAPI =  "https://www.flickr.com/services/rest/?jsoncallback=?";
@@ -59,41 +55,34 @@ class Ejercicio10 {
         });
 
     }
-/*    cargarFotos() {
-        console.log("Cargar fotos " + this.photo_ids);
-       for (var i=0; i<this.photo_ids.length;i++) {
-           this.cargarFoto(this.photo_ids[i], this.secrets[i], i);
-       }
-    }
-    cargarFoto(id, sec, i) {
-        console.log("cargar foto " + id + " secre " + sec);
-        var flickrAPI = "https://www.flickr.com/services/rest/?jsoncallback=?";
+
+    cargarInteresantes() {
         var me = this;
+        this.photo_ids=[];
+        var flickrAPI =  "https://www.flickr.com/services/rest/?jsoncallback=?";
         $.getJSON(flickrAPI, 
                 {
-                    method: "flickr.photos.getInfo",
+                    method: "flickr.interestingness.getList",
                     api_key: "5a7658d7ab10dea35508741cfc4ef535",
-                    format:"json",
-                    photo_id: id,
-                    secret: sec
+                    format:"json"
                 })
             .done(function(data) {
-                console.log("info ", data);
-                var srcImg = "https://live.staticflickr.com/"+data.photo.server+"/"+_{secret}.jpg"
-                $("<img>").attr( "src", data.photo.urls.url[0]._content).attr("id", "img_" + i).appendTo( "#imagenes" );
-                
-                //me.ajustar();
-                $("#imagenes img").not(":first").hide();
-                me.imagenActual = 0;
-                $("#acciones").show();
-                me.mostrarSizesImagen(me.photo_ids[0]);
+                    $.each(data.photos.photo, function(i,item ) {
+                        var srcImg = "https://live.staticflickr.com/"+item.server+"/"+item.id+"_" + item.secret + ".jpg";
+                        $("<img>").attr( "src", srcImg).attr("id", "img_" + i).appendTo( "#imagenes" );
+                        me.photo_ids.push(item.id);
+                        me.secrets.push(item.secret);
+                        if ( i == me.numImagenes - 1 ) {
+                            return;
+                        }
+                        me.ajustar();
+                        $("#imagenes img").not(":first").hide();
+                        me.imagenActual = 0;
+                        $("#acciones").show();
+                        me.mostrarSizesImagen(me.photo_ids[0]);
+                    });
+            
         });
-    }*/
-    cargarInteresantes() {
-
-    }
-    cargarPopulares() {
-        //user_id 156927629@N08
     }
     cargarTema(tag){
         var me = this;
@@ -126,6 +115,23 @@ class Ejercicio10 {
 
         
     }
+    /*mostrarSizesImagen(idImagen) {
+        var url = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+       
+        $.getJSON(url, 
+                {
+                    method: "flickr.photos.getSizes",
+                    photo_id: idImagen,
+                    api_key: "5a7658d7ab10dea35508741cfc4ef535",
+                    format:"json"
+
+                })
+            .done(function(data) {
+                for(var i = 0; i < data.length; i++){
+                    data.
+                }
+            });
+    }*/
     mostrarSizesImagen(idImagen) {
         var url = "https://www.flickr.com/services/rest/?jsoncallback=?";
        
@@ -138,8 +144,17 @@ class Ejercicio10 {
 
                 })
             .done(function(data) {
-                console.log(data);
+                var sizes = data.sizes.size;
+                console.log(sizes);
+                var datos= "<ul>";
+                for(var i = 0; i < sizes.length; i++){      
+                    console.log(sizes[i].source)  
+                    datos += "<li><a href='"+ sizes[i].source + "' >" + sizes[i].label + "</a></li>";
+                }
+                datos+= "</ul>";
+                $("#datos").html(datos);
             });
+
     }
     siguienteImagen(){    
         
