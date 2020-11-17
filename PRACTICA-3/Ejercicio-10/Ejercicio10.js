@@ -88,7 +88,7 @@ class Ejercicio10 {
         var me = this;
       
         var photo_ids=[];
-        var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+        var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
         $.getJSON(flickrAPI, 
                 {
                     tags: tag,
@@ -115,23 +115,6 @@ class Ejercicio10 {
 
         
     }
-    /*mostrarSizesImagen(idImagen) {
-        var url = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-       
-        $.getJSON(url, 
-                {
-                    method: "flickr.photos.getSizes",
-                    photo_id: idImagen,
-                    api_key: "5a7658d7ab10dea35508741cfc4ef535",
-                    format:"json"
-
-                })
-            .done(function(data) {
-                for(var i = 0; i < data.length; i++){
-                    data.
-                }
-            });
-    }*/
     mostrarSizesImagen(idImagen) {
         var url = "https://www.flickr.com/services/rest/?jsoncallback=?";
        
