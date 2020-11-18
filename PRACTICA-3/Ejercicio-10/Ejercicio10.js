@@ -128,10 +128,8 @@ class Ejercicio10 {
                 })
             .done(function(data) {
                 var sizes = data.sizes.size;
-                console.log(sizes);
                 var datos= "<ul>";
                 for(var i = 0; i < sizes.length; i++){      
-                    console.log(sizes[i].source)  
                     datos += "<li><a href='"+ sizes[i].source + "' >" + sizes[i].label + "</a></li>";
                 }
                 datos+= "</ul>";
