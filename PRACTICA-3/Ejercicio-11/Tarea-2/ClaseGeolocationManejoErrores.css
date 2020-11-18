@@ -1,0 +1,50 @@
+/* 
+ClaseGeolocalizacion.css
+*/
+/*0001*/
+body{
+    background-color:white;
+    color:black;
+}
+/*0001*/
+h1{
+    text-align:center;
+    font-size: 3em;
+}
+/*0001*/
+h2{
+    text-align:center;
+    color:black;
+    font-size: 2.5em;
+
+    background-color:white;
+}
+/*0001*/
+p{
+    font-size: 1em;
+}
+/*0001*/
+footer {
+    margin-top:2em;
+}
+/*0001*/
+img{
+    width: 2.5%;
+    height: 31px;
+}
+/*0001*/
+footer > a{
+    padding:10px;
+}
+button{
+    background-color: #e7e7e7; 
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
