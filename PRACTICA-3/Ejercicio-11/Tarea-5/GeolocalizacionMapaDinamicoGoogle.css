@@ -1,0 +1,29 @@
+/* 
+108-GeolocalizacionMapaDinamicoGoogle.css
+VersiÃ³n 1.0 20/noviembre/2018 Juan Manuel Cueva Lovelle. Universidad de Oviedo
+*/
+
+/* Siempre debe ponerse explÃ­citamente la altura del mapa, definiendo el tamaÃ±o del elemento div que contiene el mapa*/
+#mapa {
+    height: 500px;
+    width: 100%;
+}
+h1{
+    text-align: center;
+    color: blue;
+}
+h2{
+    text-align: center;
+    color: green;
+}
+p{
+    text-align: left;
+    color: black;
+}
+footer{
+    margin-top:2em;
+}
+footer a img{
+    height:31px; 
+    width:88px;
+}
