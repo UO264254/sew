@@ -1,0 +1,71 @@
+/*0100*/
+#mapa {
+    height: 500px;
+    width: 100%;
+}
+/*0001*/
+body{
+    background-color:white;
+    color:black;
+}
+/*0001*/
+h1{
+    text-align:center;
+    font-size: 3em;
+}
+/*0001*/
+h2{
+    text-align:center;
+    color:black;
+    font-size: 2.5em;
+
+    background-color:white;
+}
+/*0001*/
+p{
+    font-size: 1em;
+}
+/*0001*/
+footer{
+    margin-top:2em;
+}
+/*0003*/
+footer a img{
+    height:31px; 
+    width:88px;
+}
+
+/*0100*/
+#floating-panel {
+    top: 10px;
+    left: 25%;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.2em;
+  }
+
+/*0001*/
+label{
+    padding: 2%;
+}
+
+/*0001*/
+select, input, label {
+    font-size: 1.2em;
+}
+
+/*0001*/
+button{
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #e7e7e7; color: black;
+    font-size:1.2em;
+    margin-left:2%;
+}

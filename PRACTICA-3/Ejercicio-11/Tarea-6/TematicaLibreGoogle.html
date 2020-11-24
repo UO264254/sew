@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Mapa Temática Libre Google</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="TematicaLibreGoogle.css" rel="stylesheet"/>
+    <script src="TematicaLibreGoogle.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=mapaDinamicoGoogle.initMap&libraries=places&v=weekly"></script>
+ 
+
+<body>
+   <section id="floating-panel">
+        <h1>Dónde quieres ir</h1>
+        <label for="destino">Destino: </label>
+        <input id="destino" type="text">
+        <label for="mode">Modo de viaje: </label>
+        <select id="mode">
+          <option value="DRIVING">En coche</option>
+          <option value="WALKING">Caminando</option>
+          <option value="BICYCLING">En bici</option>
+        </select>
+        <button id="ir" onclick="mapaDinamicoGoogle.ir()">Ir</button>
+        <label for="place" >Marca: </label>
+        <select id="place" onchange="mapaDinamicoGoogle.marcarLugares()">
+          <option value="1">Sin seleccionar</option>
+          <option value="bicycle_store">Tienda de bicicletas</option>
+          <option value="library">Bibliotecas</option>
+          <option value="museum">Museos</option>
+          <option value="campground">Camping</option>
+          <option value="church">Iglesias</option>
+          <option value="gym">Gimnasios</option>
+          <option value="dentist">Dentistas</option>
+        </select>
+      </section>
+      
+    <section id="mapa">
+        <h2>Temática libre</h2>
+    </section>
+	<footer>
+	<a href="http://validator.w3.org/check/referer" hreflang="es-us"> 
+		<img src="imagenes/HTML5.png" alt="�HTML5 v�lido!"/></a>
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">
+		<img src="imagenes/CSS3.png" alt="�CSS v�lido!" /></a>
+	</footer>
+</body>
+</html>
