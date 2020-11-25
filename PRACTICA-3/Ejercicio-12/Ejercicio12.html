@@ -8,19 +8,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="Ejercicio12.js"></script>
 </head>
-<body>
+<body onload="ejercicio12.leerArchivoTexto()">
     <section>
-      <h1>Leer un archivo de texto</h1>
-      <p>Seleccione un archivo de texto:</p>
+      <h1>Leer varios archivos de texto</h1>
+      <p>Seleccione un archivo de texto o más de uno:</p>
     
       <input type="file" id="archivoTexto" onchange="ejercicio12.leerArchivoTexto()" multiple>
-      <p id="nombreArchivo"></p>
-      <p id="tamañoArchivo"></p>
-      <p id="tipoArchivo"></p>
-      <p id="ultimaModificacion"></p>
-      <p id="contenidoArchivo"></p>  
-      <pre id="areaTexto"></pre>
+      <p id="informacion"></p>
       <p id="errorLectura"></p>
+      <p id="tamaño"></p>
     </section>
   
     <footer>
