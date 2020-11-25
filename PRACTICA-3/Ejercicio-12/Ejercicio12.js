@@ -6,62 +6,57 @@ class Ejercicio12{
             document.write("<p>Este navegador soporta el API File </p>");
         }
            else document.write("<p>¡¡¡ Este navegador NO soporta el API File y este programa puede no funcionar correctamente !!!</p>");
-         
-    }
-
-     
-    calcularTamañoArchivos() {
-    var nBytes = 0,
-        archivos = document.getElementById("subirArchivos").files,
-        nArchivos = archivos.length;
-    for (var i = 0; i < nArchivos; i++) {
-        nBytes += archivos[i].size;
-    }
-    var nombresTiposTamaños="";
-    for (var i = 0; i < nArchivos; i++) {
-        nombresTiposTamaños += "<p>Archivo[" + i +"] = "+ archivos[i].name  + " Tamaño: " + archivos[i].size +" bytes " + " Tipo: " + archivos[i].type+"</p>" ;
     }
     
-    document.getElementById("numero").innerHTML = nArchivos;
-    document.getElementById("tamaño").innerHTML = nBytes + " bytes";
-    document.getElementById("nombres").innerHTML = nombresTiposTamaños;
-    }
+    leerArchivoTexto(){
+               
+        var files = document.getElementById("archivoTexto").files,
+            nArchivos = files.length,
+            archivo,
+            informacion = document.getElementById("informacion"),
+            errorArchivo = document.getElementById("errorLectura"),
+            nBytes = 0;
+            
+            for (var i = 0; i < nArchivos; i++) {
+            archivo = files[i];
+            nBytes += files[i].size;
+            
+            var elemento = document.createElement("ul");
+            elemento.innerHTML = "<li> Nombre del archivo: " + archivo.name + "</li> ";
+            elemento.innerHTML += "<li> Tamaño del archivo: " + archivo.size + " bytes" + "</li> ";
+            elemento.innerHTML += "<li> Tipo del archivo: " + archivo.type + "</li> ";
+            elemento.innerHTML += "<li> Fecha de la última modificación: " + archivo.lastModifiedDate + "</li> ";
+            elemento.innerHTML += "<li> Contenido del archivo de texto: </li> ";
+            elemento.innerHTML += "<pre class='contenidoFichero'></pre>";
+            informacion.append(elemento);
+            
+            //Solamente admite archivos de tipo texto o application
+            var tipoTexto = /text.*/;
+            var tipoApplication = /application.*/;
+            if (archivo.type.match(tipoTexto) || archivo.type.match(tipoApplication)) 
+                {
+                var lector = new FileReader();
+                lector.onload = function (evento) {
+                    var eFicheros = document.getElementsByClassName("contenidoFichero");
+                    console.log(eFicheros);
+                    for (var j=0; j<eFicheros.length; j++) {
+                        if (eFicheros[j].innerText=="") {
+                            eFicheros[j].innerText = evento.currentTarget.result;
+                            break;
+                        }
+                    }
+                    
+                }      
+                lector.readAsText(archivo);
+                }
+            else {
+                errorArchivo.innerText = "Error : ¡¡¡ Archivo no válido !!!";
+                }
+        }
+        document.getElementById("tamaño").innerHTML = "Tamaño de todos los archivos " + nBytes + " bytes";
+        
 
-    leerArchivoTexto(files){
-        //Solamente toma un archivo
-        //var archivo = document.getElementById("archivoTexto").files[0];
-        var archivo = files[0];
-        $("listaInfo").show();
-        var nombre = document.getElementById("nombreArchivo");
-        var tamaño = document.getElementById("tamañoArchivo");
-        var tipo = document.getElementById("tipoArchivo");
-        var ultima = document.getElementById("ultimaModificacion");
-        var contenido = document.getElementById("contenidoArchivo");
-        var areaVisualizacion = document.getElementById("areaTexto");
-        var errorArchivo = document.getElementById("errorLectura");
 
-        nombre.innerText = "Nombre del archivo: " + archivo.name;
-        tamaño.innerText = "Tamaño del archivo: " + archivo.size + " bytes"; 
-        tipo.innerText = "Tipo del archivo: " + archivo.type;
-        ultima.innerText = "Fecha de la última modificación: " + archivo.lastModifiedDate;
-        contenido.innerText="Contenido del archivo de texto:"
-        //Solamente admite archivos de tipo texto o application
-        var tipoTexto = /text.*/;
-        var tipoApplication = /application.*/;
-        if (archivo.type.match(tipoTexto) || archivo.type.match(tipoApplication)) 
-        {
-            var lector = new FileReader();
-            lector.onload = function (evento) {
-            //El evento "onload" se lleva a cabo cada vez que se completa con éxito una operación de lectura
-            //La propiedad "result" es donde se almacena el contenido del archivo
-            //Esta propiedad solamente es válida cuando se termina la operación de lectura
-            areaVisualizacion.innerText = lector.result;
-            }      
-            lector.readAsText(archivo);
-            }
-        else {
-            errorArchivo.innerText = "Error : ¡¡¡ Archivo no válido !!!";
-            }
     }
 
 }

@@ -1,7 +1,15 @@
 /*0001*/
-body{
-    background-color:white;
-    color:black;
+body {/*body es un selector!!!*/
+    font: 1em Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
+    line-height: 1.8;
+    color: #000000;
+    background-color: #f6f6f6;
+    text-align: justify;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom: 5%;
+    display: block;
+    padding : 10px;
 }
 /*0001*/
 h1{
