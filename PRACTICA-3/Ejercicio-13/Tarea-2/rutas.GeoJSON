@@ -1,0 +1,273 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oviedo",
+        "description": "calle Uría"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.84476,
+          43.36029,
+          232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lugones"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.81215,
+          43.40272,
+          170
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cancienes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.87179,
+          43.51307,
+          50
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Avilés"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.92483,
+          43.55473,
+          20
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ruta en tren entre Oviedo y Avilés",
+        "styleUrl": "#estilo1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.84476,
+            43.36029,
+            232
+          ],
+          [
+            -5.81215,
+            43.40272,
+            170
+          ],
+          [
+            -5.87179,
+            43.51307,
+            50
+          ],
+          [
+            -5.92483,
+            43.55473,
+            20
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oviedo",
+        "description": "calle Uría"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.84476,
+          43.36029,
+          232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.068696,
+          43.389426,
+          66
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Las Caldas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.8833,
+          43.35,
+          125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mieres"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.7785282,
+          43.249719,
+          386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ruta en tren entre Oviedo y Mieres",
+        "styleUrl": "#estilo2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.84476,
+            43.36029,
+            232
+          ],
+          [
+            -6.068696,
+            43.389426,
+            66
+          ],
+          [
+            -5.8833,
+            43.35,
+            125
+          ],
+          [
+            -5.7785282,
+            43.249719,
+            386
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Avilés",
+        "description": "calle La Cámara"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.92483,
+          43.55473,
+          20
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cudillero"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2325336,
+          43.5615134,
+          785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Las Caldas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.8833,
+          43.35,
+          125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gijón"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.66152,
+          43.53573,
+          3
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ruta en tren entre Avilés y Gijón",
+        "styleUrl": "#estilo3"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.92483,
+            43.55473,
+            20
+          ],
+          [
+            -6.2325336,
+            43.5615134,
+            785
+          ],
+          [
+            -5.8833,
+            43.35,
+            125
+          ],
+          [
+            -5.66152,
+            43.53573,
+            3
+          ]
+        ]
+      }
+    }
+  ],
+  "name": "rutas"
+}
