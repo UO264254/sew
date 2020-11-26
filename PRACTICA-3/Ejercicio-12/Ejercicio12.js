@@ -1,5 +1,6 @@
 class Ejercicio12{
     constructor(){
+        this.nBytes = 0;
         if (window.File && window.FileReader && window.FileList && window.Blob) 
         {  
             //El navegador soporta el API File
@@ -14,12 +15,12 @@ class Ejercicio12{
             nArchivos = files.length,
             archivo,
             informacion = document.getElementById("informacion"),
-            errorArchivo = document.getElementById("errorLectura"),
-            nBytes = 0;
+            errorArchivo = document.getElementById("errorLectura");
+            
             
             for (var i = 0; i < nArchivos; i++) {
             archivo = files[i];
-            nBytes += files[i].size;
+            this.nBytes += files[i].size;
             
             var elemento = document.createElement("ul");
             elemento.innerHTML = "<li> Nombre del archivo: " + archivo.name + "</li> ";
@@ -53,7 +54,7 @@ class Ejercicio12{
                 errorArchivo.innerText = "Error : ¡¡¡ Archivo no válido !!!";
                 }
         }
-        document.getElementById("tamaño").innerHTML = "Tamaño de todos los archivos " + nBytes + " bytes";
+        document.getElementById("tamaño").innerHTML = "Tamaño de todos los archivos " + this.nBytes + " bytes";
         
 
 
