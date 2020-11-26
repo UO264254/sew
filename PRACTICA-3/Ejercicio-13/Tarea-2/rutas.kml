@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+<Document id='Rutas'>
+<Style id='estilo1'>
+ <LineStyle>
+     <color>ff2f2fd3</color>
+     <width>6</width>
+ </LineStyle>
+</Style>
+<Style id='estilo2'>
+ <LineStyle>
+     <color>ff007cf5</color>
+     <width>6</width>
+ </LineStyle>
+</Style>
+<Style id='estilo3'>
+ <LineStyle>
+     <color>ff9f3f30</color>
+     <width>6</width>
+ </LineStyle>
+</Style>
+<Placemark>
+ <name>Oviedo</name>
+ <description>calle Uría</description>
+ <Point>
+     <coordinates>
+         -5.8447600,43.3602900,232
+     </coordinates>
+ </Point>
+</Placemark>
+<Placemark>
+ <name>Lugones</name>
+ <Point>
+     <coordinates>
+         -5.8121500,43.4027200,170
+     </coordinates>
+ </Point>
+</Placemark>
+<Placemark>
+ <name>Cancienes</name>
+ <Point>
+     <coordinates>
+         -5.8717900,43.5130700,50
+     </coordinates>
+ </Point>
+</Placemark>
+<Placemark>
+ <name>Aviles</name>
+ <Point>
+     <coordinates>
+         -5.9248300,43.5547300,20
+     </coordinates>
+ </Point>
+</Placemark>
+<Placemark>
+<name>Ruta en tren entre Oviedo y Avilés</name>
+<styleUrl>#estilo1</styleUrl>
+ <LineString>
+     <altitudeMode>absoluto</altitudeMode>
+     <coordinates>
+         -5.8447600,43.3602900,232
+         -5.8121500,43.4027200,170
+         -5.8717900,43.5130700,50
+         -5.9248300,43.5547300,20
+     </coordinates>
+ </LineString>
+</Placemark>
+<Placemark>
+ <name>Oviedo</name>
+ <description>calle Uría</description>
+ <Point>
+     <coordinates>
+         -5.8447600,43.3602900,232
+     </coordinates>
+ </Point>
+</Placemark>
+<Placemark>
+ <name>Grado</name>
+ <Point>
+     <coordinates>
+         -6.068696,43.389426,66
+     </coordinates>
+ </Point>
+</Placemark>
+<Placemark>
+ <name>Las Caldas</name>
+ <Point>
+     <coordinates>
+         -5.8833,43.35,125
+     </coordinates>
+ </Point>
+</Placemark>
+<Placemark>
+ <name>Mieres</name>
+ <Point>
+     <coordinates>
+         -5.7785282,43.249719,386
+     </coordinates>
+ </Point>
+</Placemark>
+<Placemark>
+<name>Ruta en tren entre Oviedo y Mieres</name>
+<styleUrl>#estilo2</styleUrl>
+ <LineString>
+     <altitudeMode>absoluto</altitudeMode>
+     <coordinates>
+         -5.8447600,43.3602900,232
+         -6.068696,43.389426,66
+         -5.8833,43.35,125
+         -5.7785282,43.249719,386
+     </coordinates>
+ </LineString>
+</Placemark>
+<Placemark>
+ <name>Avilés</name>
+ <description>calle La Cámara</description>
+ <Point>
+     <coordinates>
+         -5.9248300,43.5547300,20
+     </coordinates>
+ </Point>
+</Placemark>
+<Placemark>
+ <name>Cudillero</name>
+ <Point>
+     <coordinates>
+         -6.2325336,43.5615134,785
+     </coordinates>
+ </Point>
+</Placemark>
+<Placemark>
+ <name>Las Caldas</name>
+ <Point>
+     <coordinates>
+         -5.8833,43.35,125
+     </coordinates>
+ </Point>
+</Placemark>
+<Placemark>
+ <name>Gijón</name>
+ <Point>
+     <coordinates>
+         -5.66152,43.53573,3
+     </coordinates>
+ </Point>
+</Placemark>
+<Placemark>
+<name>Ruta en tren entre Avilés y Gijón</name>
+<styleUrl>#estilo3</styleUrl>
+ <LineString>
+     <altitudeMode>absoluto</altitudeMode>
+     <coordinates>
+         -5.9248300,43.5547300,20
+         -6.2325336,43.5615134,785
+         -5.8833,43.35,125
+         -5.66152,43.53573,3
+     </coordinates>
+ </LineString>
+</Placemark>
+</Document>
+</kml>

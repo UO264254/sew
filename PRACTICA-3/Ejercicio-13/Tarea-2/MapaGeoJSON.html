@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio 12</title>
-  <link rel="stylesheet" href="MapaKML.css"/>
+  <title>Mapa GeoJSON</title>
+  <link rel="stylesheet" href="MapaGeoJSON.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="MapaKML.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXWU0b72cPF62RUb44e09Fx3qZZscgC-A&callback=mapaKML.initMap"></script>
+  <script src="MapaGeoJSON.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXWU0b72cPF62RUb44e09Fx3qZZscgC-A&callback=mapaGeoJSON.initMap"></script>
   
 </head>
 <body>
     <section>
-      <h1>Mostrar el KML en el mapa</h1>
+      <h1>Mostrar el archivo GeoJSON sobre el mapa</h1>
       
-      <label for="archivoKML"></label>
-      <input type="file" id="archivoKML" onchange="mapaKML.leerKML(this.files)">
+      <label for="archivoGeoJSON"></label>
+      <input type="file" id="archivoGeoJSON" onchange="mapaGeoJSON.leerGeoJSON(this.files)">
       <pre id="areaTexto"></pre>
       <p id="errorLectura"></p>
     </section>

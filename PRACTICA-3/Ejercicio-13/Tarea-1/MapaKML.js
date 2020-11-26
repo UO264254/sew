@@ -24,7 +24,7 @@ class MapaKML{
             areaVisualizacion = document.getElementById("areaTexto");
            
             
-        //Solamente admite archivos de tipo texto ???
+        //Solamente admite archivos de tipo texto kml
         var tipoTexto = ".*\.kml$";
         if (archivo.name.match(tipoTexto)) 
         {
@@ -44,7 +44,6 @@ class MapaKML{
     extraerRutas(kml) {
         let parser = new DOMParser()
         let xmlDoc = parser.parseFromString(kml, "text/xml")
-        let googlePolygons = []
         let googleMarkers = []
 
         if (xmlDoc.documentElement.nodeName == "kml") {

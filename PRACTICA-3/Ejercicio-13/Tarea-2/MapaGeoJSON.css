@@ -1,0 +1,56 @@
+/*0100*/
+#mapa {
+    height: 500px;
+    width: 100%;
+}
+/*0001*/
+body {/*body es un selector!!!*/
+    font: 1em Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
+    line-height: 1.8;
+    color: #000000;
+    background-color: #f6f6f6;
+    text-align: justify;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom: 5%;
+    display: block;
+    padding : 10px;
+}
+/*0001*/
+h1{
+    text-align:center;
+    font-size: 3em;
+}
+/*0001*/
+h2{
+    text-align:center;
+    color:black;
+    font-size: 2.5em;
+
+    background-color:white;
+}
+/*0001*/
+p{
+    font-size: 1.2em;
+}
+/*0001*/
+footer{
+    margin-top:2em;
+}
+/*0003*/
+footer a img{
+    height:31px; 
+    width:88px;
+}
+/*0001*/
+input{
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+    cursor: pointer;
+}
