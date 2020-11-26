@@ -12,8 +12,9 @@
     <section>
       <h1>Leer varios archivos de texto</h1>
       <p>Seleccione un archivo de texto o más de uno:</p>
-    
-      <input type="file" id="archivoTexto" onchange="ejercicio12.leerArchivoTexto()" multiple>
+      
+      <label for="archivo">First name:</label> 
+      <input type="file" id="archivoTexto" name="archivo" onchange="ejercicio12.leerArchivoTexto()" multiple>
       <p id="informacion"></p>
       <p id="errorLectura"></p>
       <p id="tamaño"></p>
