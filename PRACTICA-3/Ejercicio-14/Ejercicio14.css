@@ -42,13 +42,10 @@ footer a img{
 input{
     border: none;
     color: black;
-    padding: 15px 32px;
-    text-align: center;
+    padding: 2px 2px;
     text-decoration: none;
     display: inline-block;
     font-size: 1em;
-    margin: 4px 2px;
-    cursor: pointer;
 }
 /*0001*/
 canvas { 
@@ -56,10 +53,6 @@ canvas {
     display: inline;
     width: 100%;
     text-align:center;
-}
-/*0001*/
-section {
-    
 }
 
 /*0100*/
