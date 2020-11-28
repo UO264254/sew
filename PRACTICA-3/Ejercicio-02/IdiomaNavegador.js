@@ -1,4 +1,9 @@
 /*IdiomaNavegador.js*/
-document.write("<h2>Idioma: ")
-document.write(infoNavegador.idioma);
-document.write("</h2>")
+class IdiomaNavegador{
+    constructor(idioma){
+        document.write("<h2>Idioma: ")
+        document.write(idioma);
+        document.write("</h2>")
+    }
+}
+var idiomaNavegador = new IdiomaNavegador();

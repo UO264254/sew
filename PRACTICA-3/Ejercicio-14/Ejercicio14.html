@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIBRE</title>
+  <link rel="stylesheet" href="Ejercicio14.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="Ejercicio14.js"></script>
+ 
+</head>
+<body onload="lienzo.init();">
+    <section>
+      <h1>Drawing attack</h1>
+      <label for="color">Color: </label>
+        <select id="color">
+          <option value="black">Negro</option>
+          <option value="red">Rojo</option>
+          <option value="blue">Azul</option>
+          <option value="green">Verde</option>
+        </select>
+
+        <label for="grosor">Grosor: </label>
+        <select id="grosor">
+          <option value="20">20</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+        </select>
+
+        <label for="union">Unión: </label>
+        <select id="union">
+          <option value="round">Redondo</option>
+          <option value="bevel">Cónico</option>
+          <option value="miter">Picudo</option>
+        </select>
+
+        <button id="clean" onclick="lienzo.clear()">Limpiar</button>
+      
+      
+    </section>
+
+    <canvas id="canvas" width="800" height="400">
+      <img id="imagen"/>
+    </canvas>
+   
+    <footer>
+      <a href="http://validator.w3.org/check/referer" hreflang="es-us"> 
+          <img src="imagenes/HTML5.png" alt="¡HTML5 válido!"/></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer">
+          <img src="imagenes/CSS3.png" alt="¡CSS válido!" /></a>
+    </footer>
+  </body>
+  </html>

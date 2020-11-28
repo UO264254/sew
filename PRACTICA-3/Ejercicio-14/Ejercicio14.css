@@ -1,0 +1,86 @@
+
+/*0001*/
+body {/*body es un selector!!!*/
+    font: 1em Tahoma, Helvetica, sans-serif; /*Familia sans-serif*/
+    line-height: 1.8;
+    color: #000000;
+    background-color: #f6f6f6;
+    text-align: justify;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom: 5%;
+    display: block;
+    padding : 10px;
+}
+/*0001*/
+h1{
+    text-align:center;
+    font-size: 2.5em;
+}
+/*0001*/
+h2{
+    text-align:center;
+    color:black;
+    font-size: 2em;
+
+    background-color:white;
+}
+/*0001*/
+p{
+    font-size: 1.2em;
+}
+/*0001*/
+footer{
+    margin-top:2em;
+}
+/*0003*/
+footer a img{
+    height:31px; 
+    width:88px;
+}
+/*0001*/
+input{
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+/*0001*/
+canvas { 
+    border: 1px solid black; 
+    display: inline;
+    width: 100%;
+    text-align:center;
+}
+/*0001*/
+section {
+    
+}
+
+/*0100*/
+#floating-panel {
+    top: 10px;
+    left: 25%;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.2em;
+  }
+
+/*0001*/
+select{
+    margin-right: 2%;
+}
+
+/*0001*/
+label, button, select{
+    font-size: 1.2em;
+}
+
