@@ -9,7 +9,7 @@ class Lienzo{
         this.canvas.addEventListener("dragover", function (evt) {
                 evt.preventDefault();
         }, false);
-        // Handle dropped image file 
+        // Al hacer drop imagen 
         var me = this;
         this.canvas.addEventListener("drop", function (evt) {
             var files = evt.dataTransfer.files;
@@ -25,9 +25,51 @@ class Lienzo{
                 }
             }
             evt.preventDefault();
-        }, false);  
+        }, false);
+
+        //Comprobar si el navegador tiene indexeddb
+		if (!('indexedDB' in window)) {
+            alert('Este navegador no soporta IndexedDB');
+            document.getElementById("guardar").style.visibility = "hidden";
+        }
+        //Abrir la base de datos
+        var me = this;
+        var request = window.indexedDB.open('dibusdb',2);
+        request.onerror = function(event) {
+        alert("No se ha podido abrir la BD");
+        };
+        request.onsuccess = function(event) {
+        me.db = request.result;
+        console.log("abierta con exito");
+        };
+        
+        request.onupgradeneeded = function upgradeNeededFunction(e) {
+            console.log("Actualizada");
+            me.db = e.target.result;
+            if (!me.db.objectStoreNames.contains('dibus')) {
+            var objectStore = me.db.createObjectStore('dibus' , {autoIncrement: true});
+            objectStore.createIndex('titulo', 'titulo', {unique: true});
+            }
+        };
+        
         this.draw();
     }
+
+    //Guardar el dibujo en la base de datos
+    guardar() {
+        var tx = this.db.transaction('dibus', 'readwrite');
+        var store = tx.objectStore('dibus');
+        var item = {
+          titulo: document.getElementById("titulo").value,
+          datos: this.canvas.toDataURL(),
+          created: new Date().getTime()
+        };
+        store.add(item);
+        tx.complete;
+      console.log('Guardado en la bd!');
+      
+    }
+    
     clearCanvas(context) {
        
         context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -118,6 +160,17 @@ class Lienzo{
         }
         
     }
+
+    pantallaCompleta() {
+		
+		if (!document.fullscreenElement) {
+			document.documentElement.requestFullscreen();
+		} else {
+			if (document.exitFullscreen) {
+				document.exitFullscreen(); 
+			}
+		}
+	}
 
     getColor(){
         return document.getElementById("color").value;

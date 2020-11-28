@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LIBRE</title>
+  <title>DRAWING ATTACK</title>
   <link rel="stylesheet" href="Ejercicio14.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="Ejercicio14.js"></script>
@@ -36,11 +36,14 @@
         </select>
 
         <button id="clean" onclick="lienzo.clear()">Limpiar</button>
-      
+        <button id="pantalla" onclick="lienzo.pantallaCompleta()">Fullscreen ON/OFF</button>
+        <label for="titulo">Titulo:</label>
+        <input id="titulo"></input>
+        <button id="guardar" onclick="lienzo.guardar()">Guardar</button>
       
     </section>
 
-    <canvas id="canvas" width="800" height="400">
+    <canvas id="canvas" width="800" height="300">
       <img id="imagen"/>
     </canvas>
    
