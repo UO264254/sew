@@ -87,7 +87,7 @@ class Ejercicio10 {
     cargarTema(tag){
         var me = this;
       
-        var photo_ids=[];
+        this.photo_ids=[];
         var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
         $.getJSON(flickrAPI, 
                 {
