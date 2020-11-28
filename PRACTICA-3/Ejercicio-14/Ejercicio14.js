@@ -5,7 +5,8 @@ class Lienzo{
     init() {
         // Activar drag & drop
         this.canvas = document.getElementById('canvas');
-        this.img = document.getElementById('imagen');
+        this.createImagen();
+        
         this.canvas.addEventListener("dragover", function (evt) {
                 evt.preventDefault();
         }, false);
@@ -187,6 +188,13 @@ class Lienzo{
     clear(){
         var ctx = this.canvas.getContext('2d');
         this.clearCanvas(ctx);
+    }
+
+    createImagen(){
+        this.img = document.createElement("img");
+        this.img.setAttribute("id", "imagen");
+        this.img.setAttribute("alt", "Imagen añadida");
+        this.canvas.append(this.img);
     }
    
 }
