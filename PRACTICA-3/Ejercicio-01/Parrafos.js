@@ -1,14 +1,14 @@
 /*Parrafos.js*/
 class Parrafos{
-    constructor(curso, estudiante, email){
+    constructor(){
         document.write("<p>Curso actual: ");
-        document.write(curso);
+        document.write(asignatura.getCurso());
         document.write("</p>");
         document.write("<p>Estudiante: ");
-        document.write(estudiante);
+        document.write(asignatura.getEstudiante());
         document.write("</p>");
         document.write("<p>e-mail: ");
-        document.write(email);
+        document.write(asignatura.getEmail());
         document.write("</p>");
     }
 

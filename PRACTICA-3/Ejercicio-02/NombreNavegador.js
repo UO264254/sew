@@ -1,8 +1,8 @@
 /*NombreNavegador.js*/
 class NombreNavegador{
-    constructor(nombre){
+    constructor(){
         document.write("<h1>Nombre del navegador: ");
-        document.write(nombre);
+        document.write(infoNavegador.getNombre());
         document.write("</h1>");
     }
 }

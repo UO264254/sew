@@ -1,8 +1,8 @@
 /* Titulo4.js */
 class Titulo4 {
-    constructor (universidad) {
+    constructor () {
         document.write("<h4>");
-        document.write(universidad);
+        document.write(asignatura.getUniversidad());
         document.write("</h4>");
     }
 }

@@ -11,11 +11,6 @@ class InfoNavegador{
         infoNavegador.javaActivo = navigator.javaEnabled();
         this.infoNavegador = infoNavegador;
     }
-    init(){
-        new NombreNavegador(this.getNombre());
-        new IdiomaNavegador(this.getIdioma());
-        new MasInfoNavegador(this.getVersion(), this.getPlataforma(), this.getAgente(), this.getJavaActivo());
-    }
 
     getNombre(){
         return this.infoNavegador.nombre;
