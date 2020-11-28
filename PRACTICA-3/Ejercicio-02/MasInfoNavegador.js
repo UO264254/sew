@@ -1,20 +1,20 @@
 /*MasInfoNavegador.js*/
 class MasInfoNavegador{
-    constructor(version, plataforma, vendedor, agente, javaActivo){
+    constructor(){
         document.write("<p>Versión: ");
-        document.write(version);
+        document.write(infoNavegador.getVersion());
         document.write("</p>");
         document.write("<p>Plataforma: ");
-        document.write(plataforma);
+        document.write(infoNavegador.getPlataforma());
         document.write("</p>");
         document.write("<p>Vendedor: ");
-        document.write(vendedor);
+        document.write(infoNavegador.getVendedor());
         document.write("</p>");
         document.write("<p>Agente: ");
-        document.write(agente);
+        document.write(infoNavegador.getAgente());
         document.write("</p>");
         document.write("<p>Java activo: ");
-        document.write(javaActivo);
+        document.write(infoNavegador.getJavaActivo());
         document.write("</p>");
     }
 }

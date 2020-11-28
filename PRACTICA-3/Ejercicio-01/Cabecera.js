@@ -11,15 +11,6 @@ class Cabecera{
         asignatura.email = "uo264254@uniovi.es";
         this.asignatura = asignatura;
     }
-
-    init(){
-        
-        new Titulo1(this.getNombre());
-        new Titulo2(this.getTitulacion());
-        new Titulo3(this.getCentro());
-        new Titulo4(this.getUniversidad());
-        new Parrafos(this.getCurso(), this.getEstudiante(), this.getEmail());
-    }
     
     getNombre(){
         return this.asignatura.nombre;

@@ -1,8 +1,8 @@
 /* Titulo3.js */
 class Titulo3 {
-    constructor (centro) {
+    constructor () {
         document.write("<h3>");
-        document.write(centro);
+        document.write(asignatura.getCentro());
         document.write("</h3>");
     }
 }

@@ -1,8 +1,8 @@
 /* Titulo1.js */
 class Titulo1 {
-    constructor (titulo) {
+    constructor () {
         document.write("<h1>");
-        document.write(titulo);
+        document.write(asignatura.getNombre());
         document.write("</h1>");
     }
 }
