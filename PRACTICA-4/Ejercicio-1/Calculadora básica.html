@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://localhost/PRACTICA-4/Ejercicio-1/CalculadoraBasica.PHP -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora básica</title>
+<link rel="stylesheet" href="./Calculadora básica_files/CalculadoraBasica.css">
+
+</head>
+<body>
+   <section>
+            <h1>Calculadora Básica</h1>
+      <p>Calculadora con operaciones simples</p>
+      
+        <!-- Tabla donde se muestra la calculadora-->
+      <form method="post" name="calculadora">
+      
+        <table> 
+            <tbody><tr> 
+                <th colspan="4"><p>Resultado:</p>
+                <input type="text" name="pantalla" title="resultado" value="" readonly=""></th> 
+            </tr>
+            <tr>
+                <td><input type="submit" class="memoria" name="mrc" value="mrc"> </td>
+                <td><input type="submit" class="memoria" name="mMenos" value="m-"> </td>
+                <td><input type="submit" class="memoria" name="mMas" value="m+"> </td>
+                <td><input type="submit" class="operador" name="operador" value="/"> </td> 
+            </tr>
+            <tr>
+                <td><input type="submit" class="digito" name="digito" value="7"> </td> 
+                <td><input type="submit" class="digito" name="digito" value="8"> </td> 
+                <td><input type="submit" class="digito" name="digito" value="9"> </td>
+                <td><input type="submit" class="operador" name="operador" value="*"> </td> 
+            </tr>
+            <tr> 
+                <td><input type="submit" class="digito" name="digito" value="4"> </td> 
+                <td><input type="submit" class="digito" name="digito" value="5"> </td> 
+                <td><input type="submit" class="digito" name="digito" value="6"> </td> 
+                <td><input type="submit" class="operador" name="operador" value="-"> </td> 
+            </tr> 
+                <tr> 
+                <td><input type="submit" class="digito" value="1" name="digito"> </td> 
+                <td><input type="submit" class="digito" value="2" name="digito"> </td> 
+                <td><input type="submit" class="digito" value="3" name="digito"> </td>
+                <td><input type="submit" class="operador" value="+" name="operador"> </td> 
+                </tr> 
+                <tr>
+                <td><input type="submit" class="digito" value="0" name="digito"> </td>
+                <td><input type="submit" class="digito" value="." name="operador"> </td> 
+                <td><input type="submit" class="digito" value="c" name="borrar"> </td> 
+                <td><input type="submit" class="igual" value="=" name="igual"> </td> 
+                
+            </tr> 
+        </tbody></table>
+        <input type="text" name="memoria" title="memoria" value="0" hidden="">
+      </form>
+      
+      
+   </section>
+<footer>
+    <a href="http://validator.w3.org/check/referer" hreflang="es-us"> 
+        <img src="./Calculadora básica_files/HTML5.png" alt="¡HTML5 válido!"></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img src="./Calculadora básica_files/CSS3.png" alt="¡CSS válido!"></a></footer>
+
+
+
+</body></html>

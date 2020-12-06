@@ -1,0 +1,100 @@
+/* CalculadoraBasica.css */
+/*0001*/
+body{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+/*0001*/
+table{
+    background-color: black; 
+    color: darkslategrey; 
+    border: solid darkslategrey 2px;
+    
+    font-size: 1.2em;
+    width:75%;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 5px;
+    border-spacing: 5px;
+    table-layout:fixed;
+}
+/*0001*/
+section{
+    background-color: chocolate;
+    width:50%;
+    text-align: center;
+    padding-bottom: 10px;
+    color:black
+}
+/*0001*/
+td, th{
+    display:table-cell;
+}
+
+/*0010*/
+.resultado
+{
+    background-color: burlywood;
+    width: 80%;
+    color:black
+}
+/*0001*/
+footer {
+    margin-top:2em;
+}
+/*0001*/
+img{
+    width: 2.5%;
+    height: 31px;
+}
+
+/*0010*/
+.memoria{
+    background-color: white;
+    color: black;
+    width: 100%;
+}
+
+/*0010*/
+.digito{
+    background-color: white;
+    color: black;
+    width: 100%;
+    border-radius: 25px;
+}
+
+/*0010*/
+.igual{
+    background-color: white;
+    color: black;
+    width: 100%;
+    border-radius: 25px;
+}
+
+/*0010*/
+.operador{
+    background-color: white;
+    color: black;
+    width: 100%;
+    border-radius: 25px;
+}
+
+/*0001*/
+footer > a{
+    padding:10px;
+}
+
+/*0001*/
+p{
+    background-color: black;
+    color: white;
+}
+
+/*0011*/
+input[type="text"] 
+{
+    background-color: burlywood;
+    width: 90%;
+    color:black
+}
