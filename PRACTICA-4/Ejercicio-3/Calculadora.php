@@ -362,10 +362,10 @@ echo "
             <tr>
                 <th colspan='5'>
                 <label for='pantalla'>Resultado:</label>
-                <textarea rows='4' cols='50' readonly>
+                <textarea id='pantalla' rows='4' cols='50' readonly>
                    $textPila
                 </textarea>
-                <input type='text' id='pantalla' name='pantalla' title='resultado' value='$resultado' readonly/></th> 
+                <input type='text' name='pantalla' title='resultado' value='$resultado' readonly/></th> 
               </th> 
             </tr>
             <tr>
@@ -429,7 +429,7 @@ echo "
                 <td><input type='submit' class='enter' value='ENTER' name='ENTER'/> </td>    
             </tr> 
         </table>
-        <input type='text' name='stack' value='$displayPila' class = 'oculto'/>
+        <input type='text' name='stack' title = 'stack' value='$displayPila' class = 'oculto'/>
       </form>
       
     ";
