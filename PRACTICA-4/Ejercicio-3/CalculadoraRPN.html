@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora RPN</title>
+<link rel="stylesheet" href="./CalculadoraRPN_files/CalculadoraRPN.css">
+
+</head>
+<body>
+   <section>
+            <h1>Calculadora RPN</h1>
+      <p>Calculadora RPN</p>
+      
+        <!-- Tabla donde se muestra la calculadora-->
+      <form method="post" name="calculadora">
+        <table>
+            <tbody><tr>
+                <th colspan="5">
+                <label for="pantalla">Resultado:</label>
+                <textarea rows="4" cols="50" readonly="">                   
+                </textarea>
+                <input type="text" id="pantalla" name="pantalla" title="resultado" value="" readonly=""></th> 
+               
+            </tr>
+            <tr>
+                <td><!--columna vacía/>--> </td>
+                <td><!--columna vacía/>--> </td>
+                <td><input type="submit" class="operador" name="sin" value="sin"> </td>
+                <td><input type="submit" class="operador" name="cos" value="cos"> </td>
+                <td><input type="submit" class="operador" name="tan" value="tan"> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" class="operador" name="cuadrado" value="x2"> </td>
+                <td><input type="submit" class="operador" name="power" value="x^y"> </td>
+                <td><input type="submit" class="operador" name="asin" value="asin"> </td>
+                <td><input type="submit" class="operador" name="acos" value="acos"> </td>
+                <td><input type="submit" class="operador" name="atan" value="atan"> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" class="operador" name="sqrt" value="√"> </td>
+                <td><input type="submit" class="operador" name="exponentialTen" value="10^x"> </td>
+                <td><input type="submit" class="operador" name="log" value="log"> </td>
+                <td><input type="submit" class="operador" name="exp" value="exp"> </td>
+                <td><input type="submit" class="operador" name="mod" value="%"> </td>
+            </tr>
+            <tr>
+                <td><!--columna vacía/>--> </td>
+                <td><!--columna vacía/>--> </td>
+                <td><input type="submit" class="operador" name="backspace" value="⊲"> </td>
+                <td><input type="submit" class="operador" name="borrar" value="C"> </td>
+                <td><input type="submit" class="operador" name="dividir" value="/"> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" class="operador" name="pi" value="π"> </td>
+                <td><input type="submit" class="digito" name="digito" value="7"> </td> 
+                <td><input type="submit" class="digito" name="digito" value="8"> </td> 
+                <td><input type="submit" class="digito" name="digito" value="9"> </td>
+                <td><input type="submit" class="operador" name="multiplicar" value="*"> </td> 
+            </tr> 
+            <tr>
+                <td><input type="submit" class="operador" name="fact" value="n!"> </td>
+                <td><input type="submit" class="digito" name="digito" value="4"> </td> 
+                <td><input type="submit" class="digito" name="digito" value="5"> </td> 
+                <td><input type="submit" class="digito" name="digito" value="6"> </td> 
+                <td><input type="submit" class="operador" name="restar" value="-"> </td> 
+            </tr>
+
+            <tr>
+                <td><!--columna vacía/>--> </td>
+                <td><input type="submit" class="digito" value="1" name="digito"> </td> 
+                <td><input type="submit" class="digito" value="2" name="digito"> </td> 
+                <td><input type="submit" class="digito" value="3" name="digito"> </td>
+                <td><input type="submit" class="operador" value="+" name="sumar"> </td>
+            </tr>
+                 
+            
+
+            <tr>
+                <td><!--columna vacía/>--> </td>
+                <td><!--columna vacía/>--> </td> 
+                <td><input type="submit" class="digito" value="0" name="digito"> </td>
+                <td><input type="submit" class="digito" value="." name="operador"> </td> 
+                <td><input type="submit" class="enter" value="ENTER" name="ENTER"> </td>    
+            </tr> 
+        </tbody></table>
+        <input type="text" name="stack" value="" class="oculto">
+      </form>
+      
+      
+   </section>
+<footer>
+    <a href="http://validator.w3.org/check/referer" hreflang="es-us"> 
+        <img src="./CalculadoraRPN_files/HTML5.png" alt="¡HTML5 válido!"></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img src="./CalculadoraRPN_files/CSS3.png" alt="¡CSS válido!"></a></footer>
+
+
+
+</body></html>
