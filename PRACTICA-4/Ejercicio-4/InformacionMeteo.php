@@ -37,7 +37,7 @@ class InformacionMeteo {
        
         $datos= "";
         $datos.="<pre>".$this->amanece."</pre>";
-        $datos.="<p> <img src='". $this->icono . "'>" . $this->descripcion."</p>";
+        $datos.="<p> <img alt = 'iconos' src='". $this->icono . "'>" . $this->descripcion."</p>";
         $datos.="<p>".$this->temperatura."ºC (sensación térmica: ".$this->sensacion."ºC)"."</p>";
         $datos.= "<table><tr><th>Presión:</th><td>".
         $this->presion."mm</td><th>"."Humedad:</th><td>".
