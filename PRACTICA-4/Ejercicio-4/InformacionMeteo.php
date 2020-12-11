@@ -39,12 +39,12 @@ class InformacionMeteo {
         $datos.="<pre>".$this->amanece."</pre>";
         $datos.="<p> <img alt = 'iconos' src='". $this->icono . "'>" . $this->descripcion."</p>";
         $datos.="<p>".$this->temperatura."ºC (sensación térmica: ".$this->sensacion."ºC)"."</p>";
-        $datos.= "<table><tr><th>Presión:</th><td>".
-        $this->presion."mm</td><th>"."Humedad:</th><td>".
-        $this->humedad."%</td></tr>"."<tr><th>Nubosidad:</th><td>".
-        $this->nubosidad."%</td><th>Visibilidad:</th><td>" . 
-        $this->visibilidad ."m</td></tr>" . "<tr><th>Dirección del viento:</th><td>" .
-        $this->direccionViento . "º</td><th>Velocidad del viento:</th><td>" . 
+        $datos.= "<table><tr><th id='presion'>Presión:</th><td headers='pres'>".
+        $this->presion."mm</td><th id='humedad'>"."Humedad:</th><td headers='hum'>".
+        $this->humedad."%</td></tr>"."<tr><th id='nubosidad'>Nubosidad:</th><td headers='nub'>".
+        $this->nubosidad."%</td><th id='visibilidad'>Visibilidad:</th><td headers='vis'>" . 
+        $this->visibilidad ."m</td></tr>" . "<tr><th id='direccion'>Dirección del viento:</th><td headers='dir'>" .
+        $this->direccionViento . "º</td><th id='velocidad'>Velocidad del viento:</th><td headers='vel'>" . 
         $this->velocidadViento ."m/s</td></tr></table>";
        
         return $datos;
