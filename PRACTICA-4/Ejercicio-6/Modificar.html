@@ -13,28 +13,30 @@
         <h1>Modificar</h1>  
         <p>Modificar datos para un registro de pruebas de usabilidad:</p>
         
-            <form method="post" action="http://localhost/PRACTICA-4/Ejercicio-6/Ejercicio6.php">
-                <p>DNI:<input type="text" name="dniLeer" value="22222222A"> </p>
+            <<form method="post" action="http://localhost/PRACTICA-4/Ejercicio-6/Ejercicio6.php">
+                <p><label for="dniLeer"> DNI:</label><input type="text" name="dniLeer" id="dniLeer" value="1"> </p>
                 <input type="submit" name="leer" value="Leer">
             </form>
             <form method="post" action="http://localhost/PRACTICA-4/Ejercicio-6/Ejercicio6.php" name="modificarDatos">
-                <p>Nombre: <input type="text" name="nombreMod" required="" value="Manolo"> </p>
-                <p>Apellidos: <input type="text" name="apellidosMod" required="" value="Larson Jiménez"></p>
-                <p>Email: <input type="email" name="emailMod" required="" value="marem@prueba1.com"></p>
-                <p>Telefono: <input type="text" name="telefonoMod" pattern="[0-9]{9}" maxlength="9" value="123456789"></p>
-                <p>Edad: <input type="number" name="edadMod" min="0" value="26"></p>
+                <p><label for="nombreMod">Nombre:</label> <input type="text" name="nombreMod" id="nombreMod" required="" value="Alejo"> </p>
+                <p><label for="apellidosMod">Apellidos:</label> <input type="text" name="apellidosMod" id="apellidosMod" required="" value="García-Rovés"></p>
+                <p><label for="emailMod">Email:</label> <input type="email" name="emailMod" id="emailMod" required="" value="prueba1@prueba1.com"></p>
+                <p><label for="telefonoMod">Telefono:</label> <input type="text" name="telefonoMod" id="telefonoMod" pattern="[0-9]{9}" maxlength="9" value="987654321"></p>
+                <p><label for="edadMod">Edad:</label> <input type="number" name="edadMod" id="edadMod" min="0" value="12"></p>
+                <fieldset>
                 <p>Sexo:</p>
-                <p>    <input type="radio" name="sexoMod" value="Masculino" checked="checked"> Hombre</p>
-                <p>    <input type="radio" name="sexoMod" value="Femenino"> Mujer</p>
-                <p>Nivel: <input type="number" name="nivelMod" min="0" max="10" required="" value="6"></p>
-                <p>Tiempo: <input type="number" name="tiempoMod" min="0" required="" value="6"></p>
-                <p>Tarea: <input type="checkbox" name="tareaMod" value="1" checked="checked"> </p>
-                <p>Comentarios: <input type="text" name="comentariosMod" value="Buena experiencia"></p>
-                <p>Mejora: <input type="text" name="mejoraMod" value="Más dinámico"></p>
-                <p>Valoracion: <input type="number" name="valoracionMod" min="0" max="10" required="" value="2"></p>
+                <p>    <input type="radio" id="masculino" name="sexoMod" value="Masculino" checked="checked"> <label for="masculino"> Hombre </label></p>
+                <p>    <input type="radio" name="sexoMod" id="femenino" value="Femenino"> <label for="femenino"> Mujer</label></p>
+         </fieldset>
+                <p><label for="nivelMod">Nivel: </label><input type="number" name="nivelMod" id="nivelMod" min="0" max="10" required="" value="5"></p>
+                <p><label for="tiempoMod">Tiempo: </label><input type="number" name="tiempoMod" id="tiempoMod" min="0" required="" value="4"></p>
+                <p><label for="tarea"> Tarea: </label> <input type="checkbox" id="tarea" name="tareaMod" value="0"> </p>
+                <p><label for="comentariosMod">Comentarios: </label><input type="text" name="comentariosMod" id="comentariosMod" value="Bueno no estuvi mal"></p>
+                <p><label for="mejoraMod">Mejora: </label><input type="text" name="mejoraMod" id="mejoraMod" value="Más variedad"></p>
+                <p><label for="valoracionMod">Valoracion: </label><input type="number" name="valoracionMod" id="valoracionMod" min="0" max="10" required="" value="5"></p>
                 <input type="submit" name="modificar" value="Modificar Datos">
-                <input type="text" name="dniMod" value="22222222A" hidden="">
-                <input type="text" name="idMod" value="31" hidden="">
+                <input type="text" name="dniMod" id="dniMod" value="1" hidden="">
+                <input type="text" name="idMod" id="idMod" value="36" hidden="">
             </form> 
             </section>
 
