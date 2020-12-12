@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Insertar datos en tabla de base de datos</title>
+    <title>Insertar</title>
     <meta charset="utf-8"/>   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Alejo" /> 
     <!-- enlace a la hoja de estilos -->
     <link href="Ejercicio6.css" rel="stylesheet" />
 </head>   
 <body>
-    <h1>Insertar datos en tabla de base de datos</h1>
     <section>
-        <h2>Formulario</h2>  
-        <p>Cargar datos en la tabla "persona" que pertenece a la base de datos "agenda"</p>
+        <h1>Formulario</h1>  
+        <p>Nuevo registro de pruebas de usabilidad:</p>
         <form method="post" action="Ejercicio6.php" name="insertarDatos">
-                <p>DNI:<input type="text" name="dni" /> </p>
-                <p>Nombre: <input type="text" name="nombre" /> </p>
-                <p>Apellidos: <input type="text" name="apellidos" /></p>
+                <p>DNI: <input type="text" name="dni" required/> </p>
+                <p>Nombre: <input type="text" name="nombre" required/> </p>
+                <p>Apellidos: <input type="text" name="apellidos" required/> </p>
+                <p>Email: <input type="email" name="email" required/></p>
+                <!--Teléfono 9 dígitos de longitud-->
+                <p>Telefono: <input type="text" name="telefono" pattern="[0-9]{9}" maxlength="9"/></p>
+                <p>Edad: <input type="number" name="edad" min="0" required/></p>
+                <!--<p>Sexo: <input type="text" name="sexo" required/></p>!-->
+                <p>Sexo:</p>
+                <p>    <input type="radio" name="sexo" value="Masculino"/> Hombre</p>
+                <p>    <input type="radio" name="sexo" value="Femenino"/> Mujer</p>
+                <p>Nivel: <input type="number" name="nivel" min="0" max="10" required/></p>
+                <p>Tiempo: <input type="number" name="tiempo" min="0" required/></p>
+                <p>Tarea: <input type="checkbox" name="tarea"/></p>
+                <p>Comentarios: <input type="text" name="comentarios" /></p>
+                <p>Mejora: <input type="text" name="mejora" /></p>
+                <p>Valoracion: <input type="number" name="valoracion" min="0" max="10" required/></p>
                 <input type="submit" value="Insertar Datos" />
         </form>
     </section>
