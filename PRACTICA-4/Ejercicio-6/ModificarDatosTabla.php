@@ -73,40 +73,42 @@
          }
         echo "
             <form method='post' action='Ejercicio6.php'>
-                <p>DNI:<input type='text' name='dniLeer' value='$dniLeer'/> </p>
+                <p><label for='dniLeer'> DNI:</label><input type='text' name='dniLeer' id='dniLeer' value='$dniLeer'/> </p>
                 <input type='submit' name='leer' value='Leer'/>
             </form>
             <form method='post' action='Ejercicio6.php' name='modificarDatos'>
-                <p>Nombre: <input type='text' name='nombreMod' required value='$nombreMod' /> </p>
-                <p>Apellidos: <input type='text' name='apellidosMod' required value='$apellidosMod' /></p>
-                <p>Email: <input type='email' name='emailMod' required value='$emailMod' /></p>
-                <p>Telefono: <input type='text' name='telefonoMod' pattern='[0-9]{9}' maxlength='9' value='$telefonoMod' /></p>
-                <p>Edad: <input type='number' name='edadMod' min='0' value='$edadMod' /></p>
+                <p><label for='nombreMod'>Nombre:</label> <input type='text' name='nombreMod' id='nombreMod' required value='$nombreMod' /> </p>
+                <p><label for='apellidosMod'>Apellidos:</label> <input type='text' name='apellidosMod' id='apellidosMod' required value='$apellidosMod' /></p>
+                <p><label for='emailMod'>Email:</label> <input type='email' name='emailMod' id='emailMod' required value='$emailMod' /></p>
+                <p><label for='telefonoMod'>Telefono:</label> <input type='text' name='telefonoMod' id='telefonoMod' pattern='[0-9]{9}' maxlength='9' value='$telefonoMod' /></p>
+                <p><label for='edadMod'>Edad:</label> <input type='number' name='edadMod' id='edadMod' min='0' value='$edadMod' /></p>
+                <fieldset>
                 <p>Sexo:</p>
-                <p>    <input type='radio' name='sexoMod' value='Masculino'";
+                <p>    <input type='radio' id ='masculino' name='sexoMod' id='masculino' value='Masculino'";
          if ($sexoMod == "Masculino") { 
             echo "checked='checked'"; 
          }        
-         echo "/> Hombre</p>
-                <p>    <input type='radio' name='sexoMod' value='Femenino'";
+         echo "/> <label for = 'masculino'> Hombre </label></p>
+                <p>    <input type='radio' name='sexoMod' id='femenino' value='Femenino'";
          if ($sexoMod == "Femenino") { 
             echo "checked='checked'"; 
          }         
-         echo "/> Mujer</p>
-                <p>Nivel: <input type='number' name='nivelMod' min='0' max='10' required value='$nivelMod' /></p>
-                <p>Tiempo: <input type='number' name='tiempoMod' min='0' required value='$tiempoMod' /></p>
-                <p>Tarea: <input type='checkbox' name='tareaMod' value='$tareaMod' ";
+         echo "/> <label for = 'femenino'> Mujer</label></p>
+         </fieldset>
+                <p><label for='nivelMod'>Nivel: </label><input type='number' name='nivelMod' id='nivelMod' min='0' max='10' required value='$nivelMod' /></p>
+                <p><label for='tiempoMod'>Tiempo: </label><input type='number' name='tiempoMod' id='tiempoMod' min='0' required value='$tiempoMod' /></p>
+                <p><label for='tarea'> Tarea: </label> <input type='checkbox' id='tarea' name='tareaMod' value='$tareaMod' ";
         
         if ($tareaMod == 1) { 
             echo "checked='checked'"; 
         } 
         echo "/> </p>
-                <p>Comentarios: <input type='text' name='comentariosMod' value='$comentariosMod' /></p>
-                <p>Mejora: <input type='text' name='mejoraMod' value='$mejoraMod' /></p>
-                <p>Valoracion: <input type='number' name='valoracionMod'  min='0' max='10' required value='$valoracionMod' /></p>
+                <p><label for='comentariosMod'>Comentarios: </label><input type='text' name='comentariosMod' id='comentariosMod' value='$comentariosMod' /></p>
+                <p><label for='mejoraMod'>Mejora: </label><input type='text' name='mejoraMod' id='mejoraMod' value='$mejoraMod' /></p>
+                <p><label for='valoracionMod'>Valoracion: </label><input type='number' name='valoracionMod' id='valoracionMod' min='0' max='10' required value='$valoracionMod' /></p>
                 <input type='submit' name='modificar' value='Modificar Datos' />
-                <input type='text' name='dniMod' value='$dniMod' hidden/>
-                <input type='text' name='idMod' value='$idMod' hidden/>
+                <label for='dniMod' hidden>DniMod:</label> <input type='text' name='dniMod' id='dniMod' value='$dniMod' hidden/>
+                <label for='idMod' hidden>IdMod:</label> <input type='text' name='idMod' id='idMod' value='$idMod' hidden/>
             </form> 
         ";
         ?>
