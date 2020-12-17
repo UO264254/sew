@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://localhost/PRACTICA-4/Ejercicio-7/BuscarDatosCOVID.php -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Buscar</title>
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alejo">    
+    <!-- enlace a la hoja de estilos -->
+    <link href="./BuscarDatosCovid_files/Ejercicio7.css" rel="stylesheet">
+</head>   
+<body>
+    <section>
+        <h1>Buscar</h1>  
+        <p>Buscar datos de covid por comunidad autónoma:</p>  
+        <form method="post" action="http://localhost/PRACTICA-4/Ejercicio-7/BuscarDatosCOVID.php" name="buscarDatos">
+                <p><label for="ca">CCAA: </label> <input type="text" name="ca" id="ca" required=""> </p> 
+                <p><label for="fecha">Fecha ('Y-m-d'): </label> <input type="text" name="fecha" id="fecha"> </p> 
+                <input type="submit" name="buscar" value="Buscar">
+        </form>
+        <form method="get" action="http://localhost/PRACTICA-4/Ejercicio-7/Ejercicio7.php" name="Inicio">
+            <input type="submit" name="inicio" value="Inicio">
+        </form>
+    
+                        <form method="get" action="http://localhost/PRACTICA-4/Ejercicio-7/Ejercicio7.php">
+                            <p><b>Fecha:</b> 2020-12-17</p>
+                            <p><b>Casos nuevos:</b> 1</p>
+                            <p><b>Pruebas:</b> 1</p>
+                            <p><b>Fallecidos:</b> 1</p>
+                            <p><b>Curados:</b> 1</p>
+                            <p><b>Hospitalizados en planta:</b> 1</p>
+                            <p><b>Ingresados en UCI:</b> 1</p>
+                        </form>
+                        </section>
+
+</body></html>
