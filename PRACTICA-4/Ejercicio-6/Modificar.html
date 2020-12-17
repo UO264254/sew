@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0292)http://localhost/PRACTICA-4/Ejercicio-6/ModificarDatosTabla.php?id=42&dni=11111111A&nombre=Alejo&apellidos=Garc%C3%ADa-Rov%C3%A9s&email=prueba1@prueba1.com&telefono=987654321&edad=4&sexo=Masculino&nivel=3&tiempo=13223&tarea=1&comentarios=Dif%C3%ADcil&mejora=M%C3%A1s%20f%C3%A1cil&valoracion=4 -->
+<!-- saved from url=(0294)http://localhost/PRACTICA-4/Ejercicio-6/ModificarDatosTabla.php?id=1&dni=22222222A&nombre=Marem&apellidos=Larson%20Jim%C3%A9nez&email=marem@prueba1.com&telefono=123456789&edad=26&sexo=Femenino&nivel=6&tiempo=6&tarea=1&comentarios=Buena%20experiencia&mejora=M%C3%A1s%20din%C3%A1mico&valoracion=6 -->
 <html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Modificar</title>
     
@@ -14,29 +14,29 @@
         <p>Modificar datos para un registro de pruebas de usabilidad:</p>
         
             <form method="post" action="http://localhost/PRACTICA-4/Ejercicio-6/Ejercicio6.php">
-                <p><label for="dniLeer"> DNI:</label><input type="text" name="dniLeer" id="dniLeer" value="11111111A"> </p>
+                <p><label for="dniLeer"> DNI:</label><input type="text" name="dniLeer" id="dniLeer" value="22222222A"> </p>
                 <input type="submit" name="leer" value="Leer">
             </form>
             <form method="post" action="http://localhost/PRACTICA-4/Ejercicio-6/Ejercicio6.php" name="modificarDatos">
-                <p><label for="nombreMod">Nombre:</label> <input type="text" name="nombreMod" id="nombreMod" required="" value="Alejo"> </p>
-                <p><label for="apellidosMod">Apellidos:</label> <input type="text" name="apellidosMod" id="apellidosMod" required="" value="García-Rovés"></p>
-                <p><label for="emailMod">Email:</label> <input type="email" name="emailMod" id="emailMod" required="" value="prueba1@prueba1.com"></p>
-                <p><label for="telefonoMod">Telefono:</label> <input type="text" name="telefonoMod" id="telefonoMod" pattern="[0-9]{9}" maxlength="9" value="987654321"></p>
-                <p><label for="edadMod">Edad:</label> <input type="number" name="edadMod" id="edadMod" min="0" value="4"></p>
+                <p><label for="nombreMod">Nombre:</label> <input type="text" name="nombreMod" id="nombreMod" required="" value="Marem"> </p>
+                <p><label for="apellidosMod">Apellidos:</label> <input type="text" name="apellidosMod" id="apellidosMod" required="" value="Larson Jiménez"></p>
+                <p><label for="emailMod">Email:</label> <input type="email" name="emailMod" id="emailMod" required="" value="marem@prueba1.com"></p>
+                <p><label for="telefonoMod">Telefono:</label> <input type="text" name="telefonoMod" id="telefonoMod" pattern="[0-9]{9}" maxlength="9" value="123456789"></p>
+                <p><label for="edadMod">Edad:</label> <input type="number" name="edadMod" id="edadMod" min="0" value="26"></p>
                 <fieldset>
                 <p>Sexo:</p>
-                <p>    <input type="radio" id="masculino" name="sexoMod" value="Masculino" checked="checked"> <label for="masculino"> Hombre </label></p>
-                <p>    <input type="radio" name="sexoMod" id="femenino" value="Femenino"> <label for="femenino"> Mujer</label></p>
+                <p>    <input type="radio" id="masculino" name="sexoMod" value="Masculino"> <label for="masculino"> Hombre </label></p>
+                <p>    <input type="radio" name="sexoMod" id="femenino" value="Femenino" checked="checked"> <label for="femenino"> Mujer</label></p>
          </fieldset>
-                <p><label for="nivelMod">Nivel: </label><input type="number" name="nivelMod" id="nivelMod" min="0" max="10" required="" value="3"></p>
-                <p><label for="tiempoMod">Tiempo: </label><input type="number" name="tiempoMod" id="tiempoMod" min="0" required="" value="13223"></p>
+                <p><label for="nivelMod">Nivel: </label><input type="number" name="nivelMod" id="nivelMod" min="0" max="10" required="" value="6"></p>
+                <p><label for="tiempoMod">Tiempo: </label><input type="number" name="tiempoMod" id="tiempoMod" min="0" required="" value="6"></p>
                 <p><label for="tarea"> Tarea: </label> <input type="checkbox" id="tarea" name="tareaMod" value="1" checked="checked"> </p>
-                <p><label for="comentariosMod">Comentarios: </label><input type="text" name="comentariosMod" id="comentariosMod" value="Difícil"></p>
-                <p><label for="mejoraMod">Mejora: </label><input type="text" name="mejoraMod" id="mejoraMod" value="Más fácil"></p>
-                <p><label for="valoracionMod">Valoracion: </label><input type="number" name="valoracionMod" id="valoracionMod" min="0" max="10" required="" value="4"></p>
+                <p><label for="comentariosMod">Comentarios: </label><input type="text" name="comentariosMod" id="comentariosMod" value="Buena experiencia"></p>
+                <p><label for="mejoraMod">Mejora: </label><input type="text" name="mejoraMod" id="mejoraMod" value="Más dinámico"></p>
+                <p><label for="valoracionMod">Valoracion: </label><input type="number" name="valoracionMod" id="valoracionMod" min="0" max="10" required="" value="6"></p>
                 <input type="submit" name="modificar" value="Modificar Datos">
-                <label for="dniMod" hidden="">DniMod:</label> <input type="text" name="dniMod" id="dniMod" value="11111111A" hidden="">
-                <label for="idMod" hidden="">IdMod:</label> <input type="text" name="idMod" id="idMod" value="42" hidden="">
+                <label for="dniMod" hidden="">DniMod:</label> <input type="text" name="dniMod" id="dniMod" value="22222222A" hidden="">
+                <label for="idMod" hidden="">IdMod:</label> <input type="text" name="idMod" id="idMod" value="1" hidden="">
             </form> 
             </section>
 
