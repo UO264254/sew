@@ -16,8 +16,27 @@
       
     <?php 
             $ca="";
+            $bares="";
+            $toque_queda="";
+            $distancia_interpersonal="";
+            $grupos="";
+            $id="";
             require 'BaseDatos.php';
             $bd=new BaseDatos();
+            if (isset($_POST['leer'])) {               
+                $ca = $bd->buscarPorComunidad($_POST['ca']);
+                if ($ca!=NULL) {
+                    $registro = $bd->buscarDatosNormas($ca['codigo']);
+                    if ($registro!=NULL) {
+                        $ca = $ca['nombre'];
+                        $bares = $registro['bares'];
+                        $toque_queda = $registro['toque_queda'];
+                        $distancia_interpersonal = $registro['distancia_interpersonal'];
+                        $grupos = $registro['grupos'];
+                        $id = $registro['id'];
+                    }
+                } 
+            }
             if (isset($_POST['modificar'])) {
                 $registro['bares'] = $bares;
                 $registro['toque_queda'] = $toque_queda;
@@ -25,15 +44,6 @@
                 $registro['grupos'] = $grupos;
                 $registro['id'] = $id;
                 $bd->modificarDatosNormas($registro);
-            } else  if (isset($_POST['leer'])) {               
-                $ca = $bd->buscarPorComunidad($_POST['ca']);
-                $registro = $bd->buscarDatosNormas($ca['codigo']);
-                $ca = $ca['nombre'];
-                $bares = $registro['bares'];
-                $toque_queda = $registro['toque_queda'];
-                $distancia_interpersonal = $registro['distancia_interpersonal'];
-                $grupos = $registro['grupos'];
-                $id = $registro['id'];
             }
 
             echo "
@@ -53,12 +63,20 @@
             }
                 
                 echo "/>
+            </form>
+            <form method='get' action='Ejercicio7.php' name='Inicio'>
+                <input type='submit' name='inicio' value='Inicio'/>
             </form>";
 
             if (isset($_POST['leer'])) {               
                 echo "
                     <form method='get' action=''>
-                    <p><label for='bares'>Bares:</label> <input type='checkbox' name='bares' id='bares' value='$bares'/> </p>
+                    <p><label for='bares'>Bares:</label> <input type='checkbox' name='bares' id='bares' ";
+                 
+                if ($bares==1) {
+                    echo "checked ";
+                }
+                 echo  "/> </p>
                     <p><label for='toque_queda'>Toque de queda:</label> <input type='time' name='toque_queda' id='toque_queda' required value='$toque_queda'/> </p>
                     <p><label for='distancia_interpersonal' >Distancia interpersonal:</label> <input type='double' name='distancia_interpersonal' id='distancia_interpersonal' required value='$distancia_interpersonal'/></p>
                     <p><label for='grupos'>Grupos:</label> <input type='number' name='grupos' id='grupos' required value='$grupos'/> </p>
@@ -66,7 +84,9 @@
                         <label for = 'id' hidden>id:</label><input type='text' name='id' id='id' value='$id' hidden/>
                     </form>
                 ";
-            } 
+            }
+
+
         ?>
     </section>
 </body>

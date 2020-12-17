@@ -20,21 +20,30 @@
             <p><label for="grupos">Grupos:</label> <input type="number" name="grupos" id="grupos" required/> </p>
             <input type="submit" name="insertar" value="Insertar" />
         </form>
+        <form method="get" action="Ejercicio7.php" name="Inicio">
+            <input type="submit" name="inicio" value="Inicio"/>
+        </form>
         <?php 
             require 'BaseDatos.php';
             $bd=new BaseDatos();
             if (isset($_POST['insertar'])) {
                 $ca = $bd->buscarPorComunidad($_POST['ca']);
-                $registro['codigo'] = $ca['codigo'] ;
-                $bares = 0;
-                if (isset($_POST['bares'])) {
-                    $bares = 1;
+                if($ca != NULL){
+                    $registro['codigo'] = $ca['codigo'];
+                    if($registro != NULL){
+                        $bares = 0;
+                        if (isset($_POST['bares'])) {
+                            $bares = 1;
+                        }
+                        $registro['bares'] = $bares;
+                        $registro['toque_queda'] = $_POST['toque_queda'];
+                        $registro['distancia_interpersonal'] = $_POST['distancia_interpersonal'];
+                        $registro['grupos'] = $_POST['grupos'];
+                        $bd->insertarDatosNormas($registro);
+                    }
+                    
                 }
-                $registro['bares'] = $bares;
-                $registro['toque_queda'] = $_POST['toque_queda'];
-                $registro['distancia_interpersonal'] = $_POST['distancia_interpersonal'];
-                $registro['grupos'] = $_POST['grupos'];
-                $bd->insertarDatosNormas($registro);
+                
             }
         ?>
     </section>

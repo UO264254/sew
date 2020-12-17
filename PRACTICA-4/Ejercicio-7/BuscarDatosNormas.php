@@ -16,30 +16,42 @@
                 <p><label for = "ca">CCAA: </label> <input type="text" name="ca" id="ca" required/> </p> 
                 <input type="submit" name="buscar" value="Buscar" />
         </form>
+        <form method="get" action="Ejercicio7.php" name="Inicio">
+            <input type="submit" name="inicio" value="Inicio"/>
+        </form>
     <?php 
             require 'BaseDatos.php';
             $bd=new BaseDatos();
             if (isset($_POST['buscar'])) {
-                               
+        
                 $ca = $bd->buscarPorComunidad($_POST['ca']);
-                $registro = $bd->buscarDatosNormas($ca['codigo']);
-            
-                $bares = $registro['bares'];
+                $registro = NULL;
+                if($ca != NULL){
+                    $registro = $bd->buscarDatosNormas($ca['codigo']);
+                }
+                if($registro != NULL){
+                    $nbares = $registro['bares'];
+                if ($nbares==1) {
+                    $bares="Abiertos";
+                } else {
+                    $bares="Cerrados";
+                }
                 $toque_queda = $registro['toque_queda'];
                 $distancia_interpersonal = $registro['distancia_interpersonal'];
                 $grupos = $registro['grupos'];
-            
         
-            echo "
-                <form method='get' action='Ejercicio7.php'>
-                    <p><b>Bares:</b> $bares</p>
-                    <p><b>Toque de queda:</b> $toque_queda</p>
-                    <p><b>Distancia interpersonal:</b> $distancia_interpersonal</p>
-                    <p><b>Grupos:</b> $grupos</p>
-                
-                </form>
-            ";
+    
+                echo "
+                    <form method='get' action='Ejercicio7.php'>
+                        <p><b>Bares:</b> $bares</p>
+                        <p><b>Toque de queda:</b> $toque_queda</p>
+                        <p><b>Distancia interpersonal:</b> $distancia_interpersonal</p>
+                        <p><b>Grupos:</b> $grupos</p>
+                    </form>
+                ";
+                }
             }
+                    
         ?>
     </section>
 </body>

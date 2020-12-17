@@ -16,12 +16,17 @@
                 <p><label for = "ca">CCAA: </label> <input type="text" name="ca" id="ca" required/> </p> 
                 <input type="submit" name="eliminar" value="Eliminar" />
         </form>
+        <form method="get" action="Ejercicio7.php" name="Inicio">
+            <input type="submit" name="inicio" value="Inicio"/>
+        </form>
     <?php 
             require 'BaseDatos.php';
             $bd=new BaseDatos();
             if (isset($_POST['eliminar'])) {                
                 $ca = $bd->buscarPorComunidad($_POST['ca']);
-                $registro = $bd->eliminarDatosNormas($ca['codigo']);
+                if ($ca != NULL) {
+                    $registro = $bd->eliminarDatosNormas($ca['codigo']);
+                }
             }
         ?>
     </section>

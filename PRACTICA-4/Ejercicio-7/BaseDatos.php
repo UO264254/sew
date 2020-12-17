@@ -96,6 +96,64 @@
                     $db->close();
 
                 }
+                public function crearIndices() {
+                    $db = $this->conectar();
+                    $database = "covid";
+                    
+                    //selecciono la base de datos COVID para utilizarla
+                    $db->select_db($database);
+
+                    $createIndex = "CREATE UNIQUE INDEX idx_cca_codigo ON CCAA (codigo)";
+                    if ($db->query($createIndex)) {
+                        echo "<p>Indice idx_cca_codigo creado con éxito";
+                    } else {
+                        echo "<p>ERROR en la creación del idx_cca_codigo. Error : ". $db->error . "</p>";
+                        exit();
+                    }
+                    $createIndex = "CREATE UNIQUE INDEX idx_normas_codigo ON NORMAS (codigo)";
+                    if ($db->query($createIndex)) {
+                        echo "<p>Indice idx_normas_codigo creado con éxito";
+                    } else {
+                        echo "<p>ERROR en la creación del idx_normas_codigo. Error : ". $db->error . "</p>";
+                        exit();
+                    }
+                    $createIndex = "CREATE UNIQUE INDEX idx_covid_dia ON COVID_DIA (codigo, fecha)";
+                    if ($db->query($createIndex)) {
+                        echo "<p>Indice idx_covid_dia creado con éxito";
+                    } else {
+                        echo "<p>ERROR en la creación del idx_covid_dia. Error : ". $db->error . "</p>";
+                        exit();
+                    }
+                     //cerrar la conexión
+                     $db->close();
+
+                }
+                public function addForeignKeys() {
+                    $db = $this->conectar();
+                    $database = "covid";
+                    
+                    //selecciono la base de datos COVID para utilizarla
+                    $db->select_db($database);
+
+                    $foreignKey = "ALTER TABLE NORMAS
+                            ADD FOREIGN KEY (codigo) REFERENCES CCAA(codigo);";
+                    if ($db->query($foreignKey)) {
+                        echo "<p>ForeignKey NORMAS.codigo creado con éxito";
+                    } else {
+                        echo "<p>ERROR en la creación de foreingKey NORMAS.codigo . Error : ". $db->error . "</p>";
+                        exit();
+                    }
+                    $foreignKey = "ALTER TABLE COVID_DIA
+                    ADD FOREIGN KEY (codigo) REFERENCES CCAA(codigo);";
+                    if ($db->query($foreignKey)) {
+                        echo "<p>ForeignKey COVID_DIA.codigo creado con éxito";
+                    } else {
+                        echo "<p>ERROR en la creación de foreingKey COVID_DIA.codigo . Error : ". $db->error . "</p>";
+                        exit();
+                    }
+                     //cerrar la conexión
+                     $db->close();
+                }
                 public function insertarDatosCOVID($registro) {
                     $db = $this->conectar();
                     $database = "covid";
@@ -139,8 +197,12 @@
                     //ejecuta la sentencia
                     $consultaPre->execute();
 
-                    //muestra los resultados
-                    echo "<p>Filas agregadas: " . $consultaPre->affected_rows . "</p>";
+                    if ($consultaPre->affected_rows>0) {
+                        //muestra los resultados
+                        echo "<p>Éxito en la operación de insercción. </p>";
+                    } else {
+                        echo "<p>Error en la operación de insercción.</p>";
+                    }
 
                     $consultaPre->close();
 
@@ -181,8 +243,12 @@
                     //ejecuta la sentencia
                     $consultaPre->execute();
 
-                    //muestra los resultados
-                    echo "<p>Filas agregadas: " . $consultaPre->affected_rows . "</p>";
+                    if ($consultaPre->affected_rows>0) {
+                        //muestra los resultados
+                        echo "<p>Éxito en la operación de insercción. </p>";
+                    } else {
+                        echo "<p>Error en la operación de insercción.</p>";
+                    }
 
                     $consultaPre->close();
 
@@ -285,7 +351,7 @@
                     //selecciono la base de datos COVID para utilizarla
                     $db->select_db($database);
 
-                    error_log("bucarDatosCovid: ca=".$ca);
+                    error_log("buscarDatosCovid: ca=".$ca);
                     // prepara la consulta
                     $consultaPre = $db->prepare("SELECT * FROM  NORMAS  
                                                             WHERE codigo = ?");   
@@ -333,15 +399,14 @@
                     $consultaPre->bind_param('is', $ca, $fecha);       
                     //ejecuta la consulta
                     $consultaPre->execute();
-
-                    //guarda los resultados como un objeto de la clase mysqli_result
-                    if($consultaPre==TRUE){
-                        // cierra la consulta
-                        $consultaPre->close();
-                        echo "<p>Borrados los datos</p>";
-                    } else{
+                    if($consultaPre->affected_rows==0) {
                         echo "<p>Búsqueda sin resultados. No se ha borrado nada</p>";
+                    } else {
+                        echo "<p>Registro eliminado.</p>";
                     }
+                
+                    $consultaPre->close();
+                    
 
                 }
 
@@ -363,14 +428,13 @@
                     //ejecuta la consulta
                     $consultaPre->execute();
 
-                    //guarda los resultados como un objeto de la clase mysqli_result
-                    if($consultaPre==TRUE){
-                        // cierra la consulta
-                        $consultaPre->close();
-                        echo "<p>Borrados los datos</p>";
-                    } else{
+                    if($consultaPre->affected_rows==0) {
                         echo "<p>Búsqueda sin resultados. No se ha borrado nada</p>";
+                    } else {
+                        echo "<p>Registro eliminado.</p>";
                     }
+                
+                    $consultaPre->close();                   
 
                 }
 
@@ -446,7 +510,7 @@
                     //selecciono la base de datos COVID para utilizarla
                     $db->select_db($database);
 
-                    $filename = 'dataComunidades.csv';
+                    $filename = 'CCAA_importar.csv';
                     $handle = fopen($filename, "r");
                      
                     while (($data = fgetcsv($handle, 10000, ";")) !== FALSE)
@@ -505,7 +569,7 @@
                     //selecciono la base de datos COVID para utilizarla
                     $db->select_db($database);
 
-                    $filename = 'dataCovidDia.csv';
+                    $filename = 'COVID_DIA_importar.csv';
                     $handle = fopen($filename, "r");
                      
                     while (($data = fgetcsv($handle, 10000, ";")) !== FALSE)
@@ -566,7 +630,7 @@
                     //selecciono la base de datos COVID para utilizarla
                     $db->select_db($database);
 
-                    $filename = 'dataNormas.csv';
+                    $filename = 'NORMAS_importar.csv';
                     $handle = fopen($filename, "r");
                      
                     while (($data = fgetcsv($handle, 10000, ";")) !== FALSE)
@@ -647,8 +711,11 @@
                     //ejecuta la sentencia
                     $consultaPre->execute();
 
-                    //muestra los resultados
-                    echo "<p>Filas modificadas: " . $consultaPre->affected_rows . "</p>";
+                    if($consultaPre->affected_rows==0) {
+                        echo "<p>Búsqueda sin resultados. No se ha modificado nada</p>";
+                    } else {
+                        echo "<p>Filas modificadas: " . $consultaPre->affected_rows . "</p>";
+                    }
 
                     $consultaPre->close();
 
@@ -679,9 +746,11 @@
                     //ejecuta la sentencia
                     $consultaPre->execute();
 
-                    //muestra los resultados
-                    echo "<p>Filas modificadas: " . $consultaPre->affected_rows . "</p>";
-
+                    if($consultaPre->affected_rows==0) {
+                        echo "<p>Búsqueda sin resultados. No se ha modificado nada</p>";
+                    } else {
+                        echo "<p>Filas modificadas: " . $consultaPre->affected_rows . "</p>";
+                    }
                     $consultaPre->close();
 
                     
@@ -700,14 +769,19 @@
                     //UPDATE table SET column1 = value1, value2 = value2 WHERE column3 = value3
                     $consultaPre = $db->prepare("UPDATE CCAA SET  num_hab = ? WHERE id = ?");
                     //añade los parámetros de la variable Predefinida $_POST
-                    $consultaPre->bind_param('i', 
-                        $registro['num_hab']); 
+                    $consultaPre->bind_param('ii', 
+                        $registro['num_hab'],
+                        $registro['id']
+                    ); 
 
                     //ejecuta la sentencia
                     $consultaPre->execute();
 
-                    //muestra los resultados
-                    echo "<p>Filas modificadas: " . $consultaPre->affected_rows . "</p>";
+                    if($consultaPre->affected_rows==0) {
+                        echo "<p>Búsqueda sin resultados.</p>";
+                    } else {
+                        echo "<p>Filas modificadas: " . $consultaPre->affected_rows . "</p>";
+                    }
 
                     $consultaPre->close();
 
