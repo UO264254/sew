@@ -81,7 +81,7 @@
                 } 
                  echo  "/> </p>
                     <p><label for='toque_queda'>Toque de queda:</label> <input type='time' name='toque_queda' id='toque_queda' required value='$toque_queda'/> </p>
-                    <p><label for='distancia_interpersonal' >Distancia interpersonal:</label> <input type='double' name='distancia_interpersonal' id='distancia_interpersonal' required value='$distancia_interpersonal'/></p>
+                    <p><label for='distancia_interpersonal' >Distancia interpersonal:</label> <input type='number' step='0.01' name='distancia_interpersonal' id='distancia_interpersonal' required value='$distancia_interpersonal'/></p>
                     <p><label for='grupos'>Grupos:</label> <input type='number' name='grupos' id='grupos' required value='$grupos'/> </p>
                         <input type='submit' name='modificar' value='Modificar'>
                         <label for = 'id' hidden>id:</label><input type='text' name='id' id='id' value='$id' hidden/>
