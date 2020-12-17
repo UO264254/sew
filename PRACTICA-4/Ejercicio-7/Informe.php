@@ -30,14 +30,14 @@
             echo "
                 <form method='get' action='Ejercicio7.php'>
                     <img src='multimedia/icono.jpg' alt=' icono de España' />
-                    <p><b>Fecha:</b> $fecha</p>
-                    <p><b>Casos nuevos:</b> $casos_nuevos</p>
-                    <p><b>Pruebas:</b> $pruebas</p>
-                    <p><b>Positividad:</b> $positividad</p>
-                    <p><b>Fallecidos:</b> $fallecidos</p>
-                    <p><b>Curados:</b> $curados</p>
-                    <p><b>Hospitalizados en planta:</b> $hospital_planta</p>
-                    <p><b>Ingresados en UCI:</b> $uci</p>
+                    <p>Fecha: $fecha</p>
+                    <p>Casos nuevos: $casos_nuevos</p>
+                    <p>Pruebas: $pruebas</p>
+                    <p>Positividad: $positividad</p>
+                    <p>Fallecidos: $fallecidos</p>
+                    <p>Curados: $curados</p>
+                    <p>Hospitalizados en planta: $hospital_planta</p>
+                    <p>Ingresados en UCI: $uci</p>
                     <input type='submit' name='inicio' value='Inicio'/>
                 </form>
             ";
