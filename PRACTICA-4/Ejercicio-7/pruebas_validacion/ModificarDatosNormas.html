@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://localhost/PRACTICA-4/Ejercicio-7/ModificarDatosNormas.php -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Modificar</title>
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alejo">    
+    <!-- enlace a la hoja de estilos -->
+    <link href="./ModificarDatosNormas_files/Ejercicio7.css" rel="stylesheet">
+</head>   
+<body>
+    <section>
+        <h1>Modificar</h1>  
+        <p>Modificar datos de normas:</p>  
+       
+      
+    
+            <form method="post" action="http://localhost/PRACTICA-4/Ejercicio-7/ModificarDatosNormas.php" name="leerDatos">
+                <p><label for="ca"> Comunidad/ciudad Aut.:</label><input type="text" name="ca" id="ca" value="Asturias, Principado de" readonly=""> </p> 
+
+                <input type="submit" name="leer" value="Leer" disabled="">
+            </form>
+            <form method="get" action="http://localhost/PRACTICA-4/Ejercicio-7/Ejercicio7.php" name="Inicio">
+                <input type="submit" name="inicio" value="Inicio">
+            </form>
+                    <form method="post" action="http://localhost/PRACTICA-4/Ejercicio-7/ModificarDatosNormas.php">
+                    <p><label for="bares">Bares:</label> <input type="checkbox" name="bares" id="bares" checked="checked"> </p>
+                    <p><label for="toque_queda">Toque de queda:</label> <input type="time" name="toque_queda" id="toque_queda" required="" value="00:00:00"> </p>
+                    <p><label for="distancia_interpersonal">Distancia interpersonal:</label> <input type="double" name="distancia_interpersonal" id="distancia_interpersonal" required="" value="2"></p>
+                    <p><label for="grupos">Grupos:</label> <input type="number" name="grupos" id="grupos" required="" value="10"> </p>
+                        <input type="submit" name="modificar" value="Modificar">
+                        <label for="id" hidden="">id:</label><input type="text" name="id" id="id" value="3" hidden="">
+                    </form>
+                    </section>
+
+</body></html>

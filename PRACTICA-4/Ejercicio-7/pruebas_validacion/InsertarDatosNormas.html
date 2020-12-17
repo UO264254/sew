@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)http://localhost/PRACTICA-4/Ejercicio-7/InsertarDatosNormas.php -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Normas</title>
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alejo"> 
+    <!-- enlace a la hoja de estilos -->
+    <link href="./InsertarDatosNormas_files/Ejercicio7.css" rel="stylesheet">
+</head>   
+<body>
+    <section>
+        <h1>Formulario</h1>  
+        <p>Insertar datos de normas</p>
+        <form method="post" action="http://localhost/PRACTICA-4/Ejercicio-7/InsertarDatosNormas.php" name="insertarDatos">
+            <p><label for="ca"> Comunidad/Ciudad Autónoma:</label> <input type="text" name="ca" id="ca" required=""> </p>
+            <p><label for="bares">Bares:</label> <input type="checkbox" name="bares" id="bares"> </p>
+            <p><label for="toque_queda">Toque de queda:</label> <input type="time" name="toque_queda" id="toque_queda" required=""> </p>
+            <p><label for="distancia_interpersonal">Distancia interpersonal:</label> <input type="double" name="distancia_interpersonal" id="distancia_interpersonal" required=""></p>
+            <p><label for="grupos">Grupos:</label> <input type="number" name="grupos" id="grupos" required=""> </p>
+            <input type="submit" name="insertar" value="Insertar">
+        </form>
+        <form method="get" action="http://localhost/PRACTICA-4/Ejercicio-7/Ejercicio7.php" name="Inicio">
+            <input type="submit" name="inicio" value="Inicio">
+        </form>
+            </section>
+
+</body></html>
