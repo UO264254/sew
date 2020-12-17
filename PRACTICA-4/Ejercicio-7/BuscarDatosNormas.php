@@ -43,10 +43,10 @@
     
                 echo "
                     <form method='get' action='Ejercicio7.php'>
-                        <p><b>Bares:</b> $bares</p>
-                        <p><b>Toque de queda:</b> $toque_queda</p>
-                        <p><b>Distancia interpersonal:</b> $distancia_interpersonal</p>
-                        <p><b>Grupos:</b> $grupos</p>
+                        <p>Bares: $bares</p>
+                        <p>Toque de queda: $toque_queda</p>
+                        <p>Distancia interpersonal: $distancia_interpersonal</p>
+                        <p>Grupos: $grupos</p>
                     </form>
                 ";
                 }
