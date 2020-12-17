@@ -164,6 +164,25 @@
                     $db->close();
 
                 }
+
+                public function crearIndices() {
+                    $db = $this->conectar();
+                    $database = "agenda";
+                    
+                    //selecciono la base de datos COVID para utilizarla
+                    $db->select_db($database);
+
+                    $createIndex = "CREATE UNIQUE INDEX idx_dni ON PruebasUsabilidad (dni)";
+                    if ($db->query($createIndex)) {
+                        echo "<p>Indice idx_dni creado con éxito";
+                    } else {
+                        echo "<p>ERROR en la creación del idx_dni. Error : ". $db->error . "</p>";
+                        exit();
+                    }
+                        //cerrar la conexión
+                     $db->close();
+
+                }
                 public function insertarDatosTabla($dni, $nombre, $apellidos,
                                                      $email, $telefono, $edad,
                                                      $sexo, $nivel, $tiempo,
@@ -197,8 +216,11 @@
                     //ejecuta la sentencia
                     $consultaPre->execute();
 
-                    //muestra los resultados
-                    echo "<p>Filas agregadas: " . $consultaPre->affected_rows . "</p>";
+                    if($consultaPre->affected_rows>0){
+                        echo "<p>Éxito al insertar</p>";
+                    } else{
+                        echo "<p>Error al insertar</p>";
+                    }
 
                     $consultaPre->close();
 
@@ -307,8 +329,11 @@
                     //ejecuta la sentencia
                     $consultaPre->execute();
 
-                    //muestra los resultados
-                    echo "<p>Filas modificadas: " . $consultaPre->affected_rows . "</p>";
+                    if($consultaPre->affected_rows>0){
+                        echo "<p>Éxito al modificar</p>";
+                    } else{
+                        echo "<p>Modificación no realizada</p>";
+                    }
 
                     $consultaPre->close();
 
@@ -450,7 +475,7 @@
                     //selecciono la base de datos AGENDA para utilizarla
                     $db->select_db($database);
 
-                    $filename = 'data.csv';
+                    $filename = 'DATA_importar.csv';
                     $handle = fopen($filename, "r");
                      
                     while (($data = fgetcsv($handle, 10000, ",")) !== FALSE)
@@ -485,7 +510,7 @@
                     }
                 
                     fclose($handle);
-                    echo "Importación exitosa!";
+                    echo "Importación exitosa";
                        
                     
                     $db->close();
@@ -525,6 +550,7 @@
                 $bd->crearBD();
             } else if (isset($_GET['crearTabla'])) {
                 $bd->crearTabla();
+                $bd->crearIndices();
             }  else if (isset($_GET['generarInforme'])) {
                 $bd->generarInforme();
             } else if (isset($_GET['cargarDatos'])) {
