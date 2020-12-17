@@ -20,12 +20,20 @@
             $id=0;
             require 'BaseDatos.php';
             $bd=new BaseDatos();
-            if (isset($_POST['leer'])) {               
+            if (isset($_POST['leer'])) { 
+                              
                 $registro = $bd->buscarPorComunidad($_POST['ca']);
-                $num_hab = $registro['num_hab'];
-                $id = $registro['id'];
+                if($registro != NULL){
+                    $ca=$registro['nombre'];
+                    $num_hab = $registro['num_hab'];
+                    $id = $registro['id'];
+                }
             }
-
+            if (isset($_POST['modificar'])) {
+                $registro['num_hab'] = $_POST['num_hab'];
+                $registro['id'] = $_POST['id'];
+                $bd->modificarDatosCCAA($registro);
+            }
             echo "
             <form method='post' action='' name='leerDatos'>
                 <p><label for='ca'> Comunidad/ciudad Aut.:</label><input type='text' name='ca' id='ca' value='$ca' ";
@@ -43,6 +51,9 @@
             }
                 
                 echo "/>
+            </form>
+            <form method='get' action='Ejercicio7.php' name='Inicio'>
+                <input type='submit' name='inicio' value='Inicio'/>
             </form>";
 
             if (isset($_POST['leer'])) {               
@@ -56,11 +67,7 @@
             }
             
             
-            if (isset($_POST['modificar'])) {
-                $registro['num_hab'] = $_POST['num_hab'];
-                $registro['id'] = $_POST['id'];
-                $bd->modificarDatosCCAA($registro);
-            }
+            
         ?>
     </section>
 </body>

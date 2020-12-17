@@ -17,6 +17,9 @@
             $bd=new BaseDatos();
             $informe = $bd->listarCCAA();
         ?>
+        <form method="get" action="Ejercicio7.php" name="Inicio">
+            <input type="submit" name="inicio" value="Inicio"/>
+        </form>
     </section>
 </body>
 </html>

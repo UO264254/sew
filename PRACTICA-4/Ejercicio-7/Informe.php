@@ -38,6 +38,7 @@
                     <p><b>Curados:</b> $curados</p>
                     <p><b>Hospitalizados en planta:</b> $hospital_planta</p>
                     <p><b>Ingresados en UCI:</b> $uci</p>
+                    <input type='submit' name='inicio' value='Inicio'/>
                 </form>
             ";
         ?>

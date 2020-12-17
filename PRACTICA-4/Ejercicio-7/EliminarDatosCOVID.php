@@ -17,10 +17,13 @@
                 <p><label for = "fecha">Fecha: </label> <input type="text" name="fecha" id="fecha"/> </p> 
                 <input type="submit" name="eliminar" value="Eliminar" />
         </form>
+        <form method="get" action="Ejercicio7.php" name="Inicio">
+            <input type="submit" name="inicio" value="Inicio"/>
+        </form>
     <?php 
             require 'BaseDatos.php';
             $bd=new BaseDatos();
-            if (isset($_POST['eliminar'])) {
+            if (isset($_POST['eliminar'])) {     
                 if (isset($_POST['fecha'])) {
                     $fecha = $_POST['fecha'];
                     if ($fecha==NULL or empty($fecha)) {
@@ -29,7 +32,11 @@
                 }
                 
                 $ca = $bd->buscarPorComunidad($_POST['ca']);
-                $registro = $bd->eliminarDatosCovid($ca['codigo'], $fecha);
+                if ($ca!=NULL) {
+                    $registro = $bd->eliminarDatosCovid($ca['codigo'], $fecha);
+                }
+                
+                
             }
         ?>
     </section>

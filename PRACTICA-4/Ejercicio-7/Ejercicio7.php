@@ -187,6 +187,8 @@
                 $bd->crearBD();
             } else if (isset($_GET['crearTablas'])) {
                 $bd->crearTablas();
+                $bd->crearIndices();
+                $bd->addForeignKeys();
             } else if (isset($_GET['importarDatosCCAA'])) {
                 $bd->importarDatosCCAA();
             } else if (isset($_GET['exportarDatosCCAA'])) {
@@ -199,16 +201,8 @@
                 $bd->importarDatosNormas();
             } else if (isset($_GET['exportarDatosNormas'])) {
                 $bd->exportarDatosNormas();
-            } else if (isset($_POST['back'])) {
-                //quedarse en esta página
             } 
-                else if (isset($_POST['leerComunidad'])) {
-                echo "buscarPorComunidad ".$_POST['nombreComunidad'];
-                $resultado=$bd->buscarPorComunidad($_POST['nombreComunidad']);
-                echo $resultado['nombre'];
-                header('location: Informe.php?id='.$resultado['id'].'&codigo='.$resultado['codigo']
-                                                .'&nombre='.$resultado['nombre'].'&num_hab='.$resultado['num_hab']);
-            }
+                        
         ?>
    
     <footer>

@@ -28,21 +28,39 @@
             $bd=new BaseDatos();
             if (isset($_POST['leer'])) {               
                 $ca = $bd->buscarPorComunidad($_POST['ca']);
-                $registro = $bd->buscarDatosCovid($ca['codigo'], $_POST['fecha']);
-                $ca = $ca['nombre'];
-                $fecha = $registro['fecha'];
-                $casos_nuevos = $registro['casos_nuevos'];
-                $pruebas = $registro['pruebas'];
-                $fallecidos = $registro['fallecidos'];
-                $curados = $registro['curados'];
-                $hospital_planta = $registro['hospital_planta'];
-                $uci = $registro['uci'];
-                $id = $registro['id'];
+                if($ca != NULL){
+                    $registro = $bd->buscarDatosCovid($ca['codigo'], $_POST['fecha']);
+                    if($registro != NULL){
+                        $ca = $ca['nombre'];
+                        $fecha = $registro['fecha'];
+                        $casos_nuevos = $registro['casos_nuevos'];
+                        $pruebas = $registro['pruebas'];
+                        $fallecidos = $registro['fallecidos'];
+                        $curados = $registro['curados'];
+                        $hospital_planta = $registro['hospital_planta'];
+                        $uci = $registro['uci'];
+                        $id = $registro['id'];
+                    }
+
+                }
+                
             }
+
+            if (isset($_POST['modificar'])) {
+                $registro['casos_nuevos'] = $_POST['casosNuevos'];
+                $registro['pruebas'] = $_POST['pruebas'];
+                $registro['fallecidos'] = $_POST['fallecidos'];
+                $registro['curados'] = $_POST['curados'];
+                $registro['hospital_planta'] = $_POST['hospital_planta'];
+                $registro['uci'] = $_POST['uci'];
+                $registro['id'] = $_POST['id'];
+                
+                $bd->modificarDatosCOVID($registro);
+            } 
 
             echo "
             <form method='post' action='' name='leerDatos'>
-                <p><label for='ca'> Comunidad/ciudad Aut.:</label><input type='text' name='ca' id='ca' value='$ca' ";
+                <p><label for='ca'> Comunidad/ciudad Aut.:</label><input type='text' name='ca' id='ca' value='$ca' required ";
             
             if (isset($_POST['leer'])) {
                 echo " readonly";
@@ -64,7 +82,11 @@
             }
                 
                 echo "/>
-            </form>";
+            </form>
+            
+            ";
+
+
 
             if (isset($_POST['leer'])) {               
                 echo "
@@ -80,17 +102,10 @@
                     </form>
                 ";
             } 
-            if (isset($_POST['modificar'])) {
-                $registro['casos_nuevos'] = $_POST['casosNuevos'];
-                $registro['pruebas'] = $_POST['pruebas'];
-                $registro['fallecidos'] = $_POST['fallecidos'];
-                $registro['curados'] = $_POST['curados'];
-                $registro['hospital_planta'] = $_POST['hospital_planta'];
-                $registro['uci'] = $_POST['uci'];
-                $registro['id'] = $_POST['id'];
-                
-                $bd->modificarDatosCOVID($registro);
-            } 
+           echo " <form method='get' action='Ejercicio7.php' name='Inicio'>
+                <input type='submit' name='inicio' value='Inicio'/>
+            </form>";
+        
         ?>
     </section>
 </body>
